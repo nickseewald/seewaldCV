@@ -1,0 +1,712 @@
+% !TeX TS-program = xelatex
+
+\documentclass[letterpaper,11pt]{article} % Default font size and paper size
+
+\usepackage[margin=1in]{geometry}
+\usepackage{datetime}
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+
+%\newfontfamily\headingfont{DM_Serif_Display.ttf}
+%\newfontfamily\headingfont{Source Serif Pro}
+\newfontfamily\headingfont{IBM Plex Serif}
+\setmainfont{IBM Plex Sans}
+\setmonofont{IBM Plex Mono}[Scale=MatchLowercase]
+\setsansfont{IBM Plex Sans}
+%\setmainfont{HindGuntur-Regular.ttf}[BoldFont= HindGuntur-Bold.ttf]
+
+\usepackage{fontawesome5}
+%\newcommand*\faMobile{{\FA\symbol{"F10B}}}
+
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{titling}
+\usepackage{titlesec}
+\usepackage[toc,enum,bib,lineno,eqno]{tabfigures}
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+\usepackage{tabularx}
+\usepackage{ltablex} % longtable for tabularx?
+\usepackage{multirow}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+\urlstyle{tt}
+
+% For enumitem description
+\newcommand{\appendColon}[1]{#1:}
+\setlist[description]{%
+	font=\it\appendColon,
+}
+% Conference list definition
+\newlist{conflist}{itemize}{1}
+\setlist[conflist, 1]{%
+	topsep=0pt,
+	labelwidth=0pt,
+	leftmargin=1em,
+	label=-
+}
+
+\titleformat{\section}{\Large\raggedright\headingfont}{}{0em}{}[\titlerule] % Text formatting of sections
+% \titleformat{\subsection}{\large\raggedright\headingfont}{\thesection}{1em}{\hrule} % Text formatting of sections
+
+\titleformat*{\subsection}{\large\headingfont}
+\titleformat*{\subsubsection}{\headingfont}
+\renewcommand{\maketitlehooka}{\headingfont}
+
+\newdateformat{cvdate}{\THEMONTH-\THEYEAR}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize{N.J. Seewald}}
+\fancyfoot[C]{\footnotesize{\thepage}}
+\fancyfoot[R]{\footnotesize{\monthname \ \the\year}}
+
+\fancypagestyle{firstpage}
+{
+	\fancyhf{}
+	\fancyfoot[C]{\footnotesize \thepage}
+	\fancyfoot[R]{\footnotesize{\monthname \ \the\year}}
+	\renewcommand{\headrulewidth}{0pt} % removes horizontal header line
+}
+
+\begin{document}
+	\begin{center}
+		\headingfont
+		\huge{\textbf{Nicholas J. Seewald, Ph.D.}} \\
+%\huge{\textbf{NICHOLAS J. SEEWALD, Ph.D.}} \\
+		\Large{Curriculum Vitae}
+	\end{center}
+	
+	\begin{center}
+	\faIcon[regular]{envelope} \  \href{mailto:nicholas.seewald@pennmedicine.upenn.edu}{\texttt{seewaldn@pennmedicine.upenn.edu}} \quad
+	\faLaptop \  \href{https://www.nickseewald.com}{\texttt{nickseewald.com}} \quad
+	\faGithub  \  \href{https://www.github.com/nickseewald}{\texttt{nickseewald}}
+\end{center}
+
+% CONTACT ----------------------------------------------
+
+	\section*{Professional Data}
+
+	\begin{minipage}[t]{.61\textwidth}
+		Department of Biostatistics, Epidemiology, and Informatics \\
+		University of Pennsylvania Perelman School of Medicine \\
+		624 Blockley Hall \\
+		423 Guardian Drive \\
+		Philadelphia, PA 19104
+	\end{minipage}
+
+	\thispagestyle{firstpage} % suppress footer on this page
+	\hyphenation{post-meno-pausal} % fix weird hyphenation in paper title
+
+% EDUCATION ------------------------------------------
+
+	\section*{Education}
+	\vspace{-.8\textfloatsep}
+	\renewcommand{\arraystretch}{1.25}
+	\begin{tabularx}{\textwidth}{p{16mm}p{7mm}X}
+		2021 & Ph.D. & Statistics. University of Michigan. \\
+		&  & 
+		\hfill\begin{minipage}{\linewidth}
+			\begin{flushleft}
+			{\small Advised by Daniel Almirall, Ph.D.} \\
+			\small Thesis ``Design and Analytic Considerations for Sequential, Multiple-Assignment Randomized Trials with Continuous Longitudinal Outcomes.'' \href{https://dx.doi.org/10.7302/2671}{DOI: \texttt{n4r2}}
+			\end{flushleft}
+		\end{minipage} \vspace{\itemsep} \\
+		2018 & M.A. & Statistics. University of Michigan. \\[\itemsep]
+		2015 & M.S. & Biostatistics. University of Michigan. \\[\itemsep]
+		2013 & B.S. & Mathematics (with Life Science), \textit{cum laude}. University of Notre Dame.
+	\end{tabularx}
+	\renewcommand{\arraystretch}{1}
+	
+	\section*{Academic Positions}
+	\vspace{-.8\textfloatsep}
+	\renewcommand{\arraystretch}{1.25}
+	\begin{tabularx}{\textwidth}{p{16mm}X}
+		2023-   & Assistant Professor, University of Pennsylvania, Perelman School of Medicine. \\[-1.5mm]
+		&
+		\hspace{3mm}\begin{minipage}{\linewidth}
+			\begin{flushleft}
+				{\small Department of Biostatistics, Epidemiology, and Informatics}
+			\end{flushleft} 
+		\end{minipage} \\
+		2021-23 &  Postdoctoral Fellow, Johns Hopkins Bloomberg School of Public Health. \\
+		&
+		\hspace{3mm}\begin{minipage}{\linewidth}
+			\begin{flushleft}
+				{\small Department of Health Policy and Management} \\[-0.75mm]
+				{\small Advised by Elizabeth A. Stuart, Ph.D. and Emma E. (Beth) McGinty, Ph.D.}
+			\end{flushleft} 
+		\end{minipage}
+	\end{tabularx}
+	\renewcommand{\arraystretch}{1}
+	
+	\section*{Awards}
+	\begin{enumerate}
+		\item Excellence in Teaching. Johns Hopkins Bloomberg School of Public Health, AY 2022-23, First Term.
+		\item Junior Researcher Travel Grant, American Causal Inference Conference, 2022. Supported by the National Science Foundation, awarded to Duke University.
+		\item Brenda Gunderson Graduate Student Instructor Award. Department of Statistics, University of Michigan, 2021. (Inaugural recipient)
+		\item Outstanding Graduate Student Instructor. Rackham Graduate School, University of Michigan, 2021. (University-wide)
+		\item Outstanding Graduate Student Instructor. Department of Statistics, University of Michigan, 2020.
+		\item Best Departmental Poster, Statistics. Michigan Student Symposium for Interdisciplinary Statistical Sciences, 2017.
+		\item Best Departmental Poster, Biostatistics. Michigan Student Symposium for Interdisciplinary Statistical Sciences, 2015.
+	\end{enumerate}
+	
+	\section*{Publications}
+    
+    {\small \underline{Underline} denotes trainee with significant mentoring.}
+    
+	\subsection*{Peer-Reviewed Articles}
+	
+	\begin{enumerate}
+        % \item \underline{Moin EE}, \textbf{Seewald NJ}, Halpern SD (To Appear) ``Outcomes and Use of Life Support Among Patients Admitted to U.S. Intensive Care Units, 2014 – 2023.'' \textit{JAMA}.
+    
+        \item Till JE, \textbf{Seewald NJ}, Yazdani Z, Wang Z, Ballinger D, Samberg H, Dandu S, Macia C, Yin M, Abdalla A, Prior T, Shah S, Patel T, McCoy E, Monsour M, Wills CA, Bochenek V, Serrano J, Snuderl M, Phillips RE, O'Rourke DM, Amankulor NM, Nabavizadeh A, Desai AS, Gollomp K, Binder ZA, Zhou W, Bagley SJ, and Carpenter EL (To Appear) ``Corticosteroid-dependent association between prognostic peripheral blood cell-free DNA levels and neutrophil-mediated NETosis in patients with glioblastoma.'' \textit{Clinical Cancer Research}.
+        
+		\item \textbf{Seewald NJ}, McGinty EE, Stuart EA (2024) ``Target Trial Emulation for Evaluating Health Policy.'' \textit{Annals of Internal Medicine}, 177:11, 1530-1538. \href{https://doi.org/nmmw}{DOI: \texttt{nmmw}}.
+		
+		\item Stone EM, Jopson AD, \textbf{Seewald NJ}, Stuart EA, Wise E, McCourt AD, German D, McGinty EE (2024) ``Effects of Texas state agency integration on mental health service use among individuals with co-occurring cognitive disabilities and mental health conditions.'' \textit{Community Mental Health Journal}. \href{https://doi.org/nmmv}{DOI: \texttt{nmmv}}.
+		
+		\item McGinty EE, Tormohlen KN, \textbf{Seewald NJ}, Bicket MC, McCourt AD, Rutkow L, White SA, Stuart EA (2023) ``Effects of U.S. state medical cannabis laws on treatment of chronic non-cancer pain.'' \textit{Annals of Internal Medicine}, 176:7, 904-912. \href{https://doi.org/khxp}{DOI: \texttt{khxp}}.
+		
+		\item McGinty EE, \textbf{Seewald NJ}, Bandara S, Cerd\'{a} M, Daumit G, Eisenberg, M, Griffin BA, Igusa T, Jackson JW, Kennedy-Hendricks A, Marsteller J, Miech EJ, Purtle J, Schmid I, Schuler MS, Yuan CT, Stuart, EA (2022) ``Scaling interventions to manage chronic disease: Innovative methods at the intersection of health policy research and implementation science.'' \textit{Prevention Science}, 25, 96-108. \href{https://doi.org/jbkm}{DOI: \texttt{jbkm}}.
+		
+		\item McGinty EE, Bicket MC, \textbf{Seewald NJ}, Stuart EA, Alexander GC, Barry, CL, McCourt AD, Rutkow, L (2022) ``Effects of state opioid prescribing laws on use of opioid and other pain treatments among commercially insured U.S. adults.'' \textit{Annals of Internal Medicine}, 175:5, 617-627. \href{https://doi.org/hss3}{DOI: \texttt{hss3}}.
+		
+        \item\textbf{Seewald NJ}, Kidwell KM, Wu T, Nahum-Shani I, Almirall D (2020) ``Sample size considerations for comparing dynamic treatment regimens in a sequential multiple-assignment randomized trial with a continuous longitudinal outcome.'' \textit{Statistical Methods in Medical Research}, 29:7, 1891-1912. \href{https://doi.org/gf85ss}{DOI: \texttt{gf85ss}}.
+        
+		\item \textbf{Seewald NJ}, Smith SN, Lee AJ, Klasnja P, Murphy SA (2019) ``Practical Considerations for Data Collection and Management in Mobile Health Micro-randomized Trials.'' \textit{Statistics in Biosciences}, 11:2, 355-370. \href{https://doi.org/gfsvx7}{DOI: \texttt{gfsvx7}}.
+		
+		\item Klasnja P, Smith S, \textbf{Seewald NJ}, Lee A, Hall K, Luers B, Heckler E, Murphy SA (2018) ``Efficacy of contextually-tailored suggestions for physical activity: A micro-randomized optimization trial of HeartSteps.'' \textit{Annals of Behavioral Medicine}, 53:6, 573-582. \href{https://doi.org/hh5s}{DOI: \texttt{hh5s}}.
+			
+		\item Kidwell KM, \textbf{Seewald NJ}, Tran Q, Kasari K, Almirall D (2018) ``Design and analysis considerations for comparing dynamic treatment regimens with binary outcomes from sequential multiple assignment randomized trials.'' \textit{Journal of Applied Statistics}, 45:9, 1628-1651. \href{https://doi.org/hh5r}{DOI: \texttt{hh5r}}.
+		
+		\item Meurer WJ, \textbf{Seewald NJ}, Kidwell KM (2017) ``Sequential Multiple Assignment Randomized Trials: An Opportunity for Improved Design of Stroke Reperfusion Trials.'' \textit{Journal of Stroke and Cerebrovascular Diseases}, 26:4, 717-724. \href{https://doi.org/hh5t}{DOI: \texttt{hh5t}}.
+			
+		\item Kadakia KC, Kidwell KM, \textbf{Seewald NJ}, Snyder CF, Storniolo AM, Otte JL, Flockhart DA, Hayes DF, Stearns V, Henry NL (2017) ``Prospective assessment of patient-reported outcomes and estradiol and drug concentrations in patients experiencing toxicity from adjuvant aromatase inhibitors.'' \textit{Breast Cancer Research and Treatment}, 164, 411-419. \href{https://doi.org/gbktjs}{DOI: \texttt{gbktjs}}.
+
+		\item Hertz DL, Kidwell KM, \textbf{Seewald NJ}, Gersch CL, Desta Z, Flockhart DA, Storniolo A-M, Stearns V, Skaar TC, Hayes DF, Henry NL, and Rae JM (2016) ``Polymorphisms in Drug-Metabolizing Enzymes and Steady-State Exemestane Concentration in Postmenopausal Patients with Breast Cancer.'' \textit{The Pharmacogenomics Journal}, 17, 521-527. \href{https://doi.org/f9pc88}{DOI: \texttt{f9pc88}}.
+			
+		\item Kadakia KC, Snyder CF, Kidwell KM, \textbf{Seewald NJ}, Flockhart DA, Skaar TC, Desta Z, Rae JM, Otte JL, Carpenter JS, Storniolo AM, Hayes DF, Stearns V, Henry NL (2016) ``Patient-Reported Outcomes and Early Discontinuation in Aromatase Inhibitor-Treated Postmenopausal Women With Early Stage Breast Cancer.'' \textit{The Oncologist}, 21:5, 539-546. \href{https://doi.org/hh5w}{DOI: \texttt{hh5w}}.
+			
+		\item Hertz DL, Caram MV, Kidwell KM, Thibert JN, Gersch C, \textbf{Seewald NJ}, Smerage J, Rubenfire M, Henry NL, Cooney KA, Leja M, Griggs JJ, and Rae JM (2016) ``Evidence for association of SNPs in ABCB1 and CBR3, but not RAC2, NCF4, SLC28A3 or TOP2B, with chronic cardiotoxicity in a cohort of breast cancer patients treated with anthracyclines.'' \textit{Pharmacogenomics}, 17, 231-240. \href{https://doi.org/f83s4t}{DOI: \texttt{f83s4t}}.
+			
+		\item Randolph AH, \textbf{Seewald NJ}, Rickert K and Brown SN (2013) ``Tris (3, 5-di-tert-butylcate\-cholato) molybdenum (VI): Lewis acidity and nonclassical oxygen atom transfer reactions.'' \textit{Inorganic Chemistry}, 52:21, 12587-12598. \href{https://doi.org/f5g68q}{DOI: \texttt{f5g68q}}.
+
+		\item Marshall-Roth T, Liebscher SC, Rickert K, \textbf{Seewald NJ}, Oliver AG and Brown, SN (2012) ``Nonclassical oxygen atom transfer reactions of oxomolybdenum(vi) bis(catecholate).'' \textit{Chemical Communications}, 48, 7826-7828. \href{https://doi.org/hh5x}{DOI: \texttt{hh5x}}.
+	\end{enumerate}
+
+	
+	\subsection*{Peer-Reviewed Book Chapters}
+	
+		\begin{enumerate}			
+			\item Smith SN, \textbf{Seewald NJ}, Klasnja P (2023) ``Design Considerations for Preparation, Optimization, Evaluation and Maintaining Digital Therapeutics''. In \textit{Digital Therapeutics for Mental Health and Addiction: State of the Science and Vision for the Future}, edited by N. Jacobson, T. Kowatsch, and L. Marsch, 135-150. Cambridge: Academic Press. \href{https://doi.org/jf2w}{doi: \texttt{jf2w}}.
+			
+			\item \textbf{Seewald NJ}, Hackworth O, Almirall D (2021) ``Sequential, multiple assignment, randomized trials (SMART)''. In \textit{Principles and Practice of Clinical Trials}, edited by S. Piantadosi and C.L. Meinert. Cham: Springer. \href{https://doi.org/hh5z}{DOI: \texttt{hh5z}}.
+			
+			\item  Smith SN, Lee AJ, Hall K, \textbf{Seewald NJ}, Boruvka A, Murphy SA, Klasnja P (2017) ``Design lessons from a micro-randomized pilot study in mobile health''. In \textit{Mobile Health}, edited by J. Rehg, S.A. Murphy, and S. Kumar, 59-82. Cham: Springer. \href{https://doi.org/hh5v}{DOI: \texttt{hh5v}}.
+		\end{enumerate}
+		
+ 	\subsection*{Conference Proceedings (Last 3 Years)}
+ 	\begin{enumerate}
+        
+        \item \underline{Mayer M}, \textbf{Seewald N}, Perez EU, Homet Moreno B, Ramamurthy C, Babcock A, Li H, Mamtani R (2025) ``Real-world time on treatment (rwTOT) with first-line (1L) enfortumab vedotin and pembrolizumab (EV+P) after U.S. Food and Drug Administration approval for advanced urothelial cancer (aUC),'' \textit{Journal of Clinical Oncology}, 43:731–731. \href{https://doi.org/pb6t}{DOI: \texttt{pb6t}}.
+
+        \item O'Leary C, Tischfield D, Avritscher R, El-Haddad G, Fidelman N, Garcia-Monaco R, Vijayvergia N, Kunz P, \textbf{Seewald N}, Soulen MC (2024) ``Does liver tumor morphology predict outcomes after LDT, PRRT or captem?'' 17th Annual Multidisciplinary NET Medical Symposium NANETS 2024, Chicago, IL. \textit{Endocrine Abstracts}, 108, C25. \href{https://doi.org/pfnp}{DOI: \texttt{pfnp}}.
+    
+ 		\item Anbil S, \textbf{Seewald NJ}, Lin K, Craib M, Connor C, Giordano H, McLachlan K, Kwan T, Maloney L, Tukachinsky H, Schrock A, Wang S, Sokol E, Decker B, Nathanson K., Domchek S, Reiss K (2024) ``LODESTAR: A Single Arm Phase II Study of Rucaparib in Solid Tumors with Pathogenic Germline or Somatic Variants in Homologous Recombination Repair (HRR) Genes,'' [abstract]. In: Proceedings of the AACR Special Conference in Cancer Research: Advances in Pancreatic Cancer Research; 2024 Sep 15-18; Boston, MA. Philadelphia (PA): AACR; \textit{Cancer Research} 84(17 Suppl\_2):Abstract nr C006. \href{https://doi.org/ntfr}{DOI: \texttt{ntfr}}.
+
+        \item Hood R, Rathore S, \textbf{Seewald NJ}, Reiss KA (2024) ``Association of BRCA1/2 pathogenic variants with primary tumor location and metastatic organotropism in pancreatic adenocarcinoma.'' \textit{Journal of Clinical Oncology}, 42:16\_suppl, 4151-4151.
+
+        \item Hood R, \textbf{Seewald NJ}, Rathore S, Reiss KA (2024) ''Interaction of BRCA1 vs BRCA2 pathogenic variants with primary tumor location in pancreatic cancer.'' \textit{Journal of Clinical Oncology}, 42:16\_suppl, e16326-e16326.
+        
+ 	   %    \item Kadakia, K.C., Kidwell, K.M., \textbf{Seewald, N.J.}, Snyder, C.F., Flockhart, D.A., Otte, J.L., Hayes, D.F., Storniolo, A.M., Stearns, V., and Henry, N.L. (2016), ``Crossover from One Aromatase Inhibitor (AI) to Another in the Exemestane and Letrozole Pharmacogenetics (ELPh) Trial,'' \textit{Journal of Clinical Oncology}, 34, 3 [supplement], 158.
+			
+ 		% \item Mammoser, A.G., Weathers, S.S., \textbf{Seewald, N.J.}, Taylor, J.M.G., and Junck, L. (2015), ``Primary CNS Lymphoma; A Review of the University of Michigan Experience 2004-2013,'' \textit{Journal of Clinical Oncology}, 33, 15 [supplement], e13012.
+			
+ 		% \item Kadakia, K.C., Snyder, C.F., Kidwell, K.M., \textbf{Seewald, N.J.}, Storniolo, A.M., Flockhart, D.A., Carpenter, J.S., Hayes, D.F., Stearns, V., and Henry, N.L. (2015), ``Associations between Treatment-Emergent Symptoms and Early Discontinuation of Aromatase Inhibitor (AI) Therapy,'' \textit{Journal of Clinical Oncology}, 33, 15 [supplement], e20745.
+ 		
+ 		% \item Hertz, D.L., Kidwell, K.M., \textbf{Seewald, N.J.}, Gersch, C.L., Desta, Z., Flockhart, D.A., Storniolo, A.M., Stearns, V., Skaar, T.C., Hayes, D. F., Henry, N.L., and Rae, J.M. (2015), ``CYP3A4*22 polymorphism is associated with increased exemestane concentrations in postmenopausal breast cancer patients'' [abstract]. Proceedings of the Thirty-Eighth Annual CTRC-AACR San Antonio Breast Cancer Symposium: 2015 Dec 8-12; San Antonio, TX. Philadelphia (PA): AACR.
+ 	\end{enumerate}
+	
+	\subsection*{Other Publications and Preprints}
+		\begin{enumerate}			
+            \item \underline{Moin EE}, \textbf{Seewald NJ}, Halpern SD ``Development and Validation of a Simple Model to Predict Patient Height.'' \href{https://www.medrxiv.org/content/10.1101/2025.03.12.25323846}{medRxiv: \texttt{2025.03.12.25323846}}
+            \item \textbf{Seewald NJ}, McGinty EE, Tormohlen K, Schmid I, Stuart EA ``Shared control individuals in state-level health policy evaluation.'' \href{https://arxiv.org/abs/2311.18093}{arXiv: \texttt{2311.18093}} [stat.ME]
+			\item \textbf{Seewald NJ} (2023) ``Adaptive Interventions for a Dynamic and Responsive Public Health Approach,'' \textit{American Journal of Public Health}, 113:1, 37-39. \href{https://doi.org/jqkz}{DOI: \texttt{jqkz}}.
+		    \item \textbf{Seewald NJ}, Sun J, Liao P (2016), ``MRT-SS Calculator: An R Shiny Application for Sample Size Calculation in Micro-Randomized Trials.'' \href{http://arxiv.org/abs/1609.00695}{arXiv: \texttt{1609.00695}} [stat.ME]
+		\end{enumerate}
+
+        \subsection*{Alternative Media}
+        \begin{enumerate}
+            \item Morabia A (host), Chakraborty B, \textbf{Seewald NJ} (2023) ``SMART and MRT - Emerging methods in public health,'' \textit{AJPH Podcast}, American Public Health Association. September 13. Available at \url{https://youtu.be/TER4kRJpCh0}.
+        \end{enumerate}
+		
+	% \subsection*{In Preparation and Under Review}
+	%     \begin{enumerate}
+ %            \item Eisenberg MD, Tormohlen KN, McCourt AD, Yu J, Neupane R, Ge Y, Rutkow L, Stuart EA, Fingerhood M, \textbf{Seewald NJ}, McGinty, EE ``Impact of State Telemedicine Policies on Substance Use Disorder (SUD) Treatment During COVID-19.''
+	%     	\item \textbf{Seewald, N.J.}, Almirall, D. ``Sample size and timepoint tradeoffs for comparing dynamic treatment regimens in a longitudinal SMART.''
+	%         \item \textbf{Seewald, N.J.}, Almirall, D. ``longsmart: An R package for design and simulation of SMARTs with longitudinal outcomes.''
+	%         \item \textbf{Seewald, N.J.}, McGinty, E.E., Tormohlen, K., Griffin B.A., Stuart, E.A. ``Ready to Roll? Whether and when to aggregate individual-level data in state health policy evaluation.'' 
+	%     \end{enumerate}
+	
+	\section*{Teaching Experience}
+	
+	    % \subsection*{Courses Taught}
+	
+		\textbf{Course Director}, \textsc{University of Pennsylvania Perelman School of Medicine}
+		\begin{enumerate}
+			\item \textit{BSTA 6100: Biostatistical Methods for Epidemiology} \hfill Fall 2024
+		\end{enumerate}
+	
+		\noindent \textbf{Co-Instructor}, \textsc{Johns Hopkins Bloomberg School of Public Health}
+		\begin{enumerate}
+			\item \textit{Seminar on Statistical Methods for Mental Health} \hfill Term 1, AY 2022-3 \\
+			\textit{Promises and Pitfalls of Prediction Models in Mental Health Research} \\
+			Co-taught with Trang Q. Nguyen, Ph.D.
+		\end{enumerate}
+		
+		\noindent \textbf{Guest Lecturer}, \textsc{Johns Hopkins Bloomberg School of Public Health}
+		\begin{enumerate}
+			\item \textit{Seminar on Statistical Methods for Mental Health} \hfill Term 3, AY 2021-2 \\
+			``Difference in Differences with Variable Treatment Timing.'' \\
+			Instructor: Elizabeth A. Stuart, Ph.D.
+		\end{enumerate}
+		
+ 		\noindent \textbf{Graduate Student Mentor}, \textsc{University of Michigan} 
+ 		\begin{enumerate}
+ 			\item \textit{STATS 250: Introduction to Statistics and Data Analysis} \hfill AY 2019-20, AY 2020-1 \\
+ 			Instructor: Brenda Gunderson, Ph.D.; Jack Miller, Ph.D.
+% 			\vspace{-\topsep}
+% 			\begin{itemize}
+% 			    \itemsep-1.4em 
+% 			    \item Mentored seven first-time graduate student instructors through their first teaching experiences.
+% 			\end{itemize}
+ 		\end{enumerate}
+	
+		\noindent \textbf{Graduate Student Instructor}, \textsc{University of Michigan}
+		\begin{enumerate}
+			\item \textit{STATS 250: Introduction to Statistics and Data Analysis} \hfill Spring 2018, AY 2019-20, AY 2020-1 \\
+			Instructor: Brenda Gunderson, Ph.D.; Jack Miller, Ph.D.
+%			\vspace{-\topsep}
+%			\begin{itemize}
+%			    \itemsep-1.4em
+%			    \item Large, non-calculus-based, cross-disciplinary introductory statistics course.
+%			\end{itemize}
+			
+			\item \textit{STATS 415: Data Mining} \hfill Winter 2018 \\
+			Instructor: Liza Levina, Ph.D. 
+%			\vspace{-\topsep}
+%			\begin{itemize}
+%			    \itemsep-1.4em
+%			    \item Upper-level undergraduate introductory machine learning course using \textit{An Introduction to Statistical Learning} (James, Witten, Hastie, Tibshirani).
+%			\end{itemize}
+			
+			\item \textit{STATS 500: Statistical Learning I: Regression} \hfill Fall 2017 \\
+			Instructor: Brian Thelan, Ph.D.
+%			\vspace{-\topsep}
+%			\begin{itemize}
+%			    \itemsep-1.4em
+%			    \item First graduate-level regression course for Applied Statistics masters students.
+%			\end{itemize}
+			
+		\end{enumerate}
+	
+	\noindent \textbf{Instructional Assistant}, \textsc{University of Michigan}
+	\begin{enumerate}
+		\item \textit{STATS 250: Introduction to Statistics and Data Analysis} \hfill Summer 2020 \\
+		Supervisor: Jack Miller, Ph.D.
+%		\vspace{-\topsep}
+%		\begin{itemize}
+%			\item Aided in curriculum development for transition to simulation-based inference in large, introductory undergraduate statistics course.
+%			\item Redesigned lab experiences to involve in-depth data analysis projects using R code in R Markdown.
+%		\end{itemize}
+	\end{enumerate}
+	
+		\noindent\textbf{Teaching Assistant}, Summer Program in Quantitative Methods of Social Research, \textsc{Inter-university Consortium for Political and Social Research}
+		\begin{enumerate}
+			\item \textit{Multilevel Models I: Introduction and Application} \hfill Summer 2018, Summer 2019\\
+			Instructor: Mark Manning, Ph.D.
+%			\vspace{-\topsep}
+%			\begin{itemize}
+%			    \itemsep-1.4em
+%			    \item Four-week project-based course for political and social scientists interested in mixed modeling.
+%			\end{itemize}
+			
+			\item \textit{Introduction to the R Statistical Computing Environment} \hfill Summer 2018, Summer 2019 \\
+			Instructor: John Fox, Ph.D.
+%			\vspace{-\topsep}
+%			\begin{itemize}
+%			    \itemsep-1.4em
+%			    \item Two-week lecture series on graphics, data management, modeling, etc., in R.\\
+%			\end{itemize}
+		\end{enumerate}
+	
+% 		\noindent \textbf{Undergraduate Teaching Assistant}, \textsc{University of Notre Dame} 
+% 		\begin{enumerate}
+% 			\item \textit{BIOS 40411: Biostatistics} \hfill Spring 2012 \\
+% 			Instructor: Gary Lamberti, Ph.D.
+% 			\vspace{-\topsep}
+% 			\begin{itemize}
+%     			\itemsep-1.4em
+%     			\item Advanced, non-calculus-based introduction to statistics for undergraduate life science majors. \\
+%     			\item Co-taught with a graduate TA weekly labs, held office hours, graded homework and exams.
+% 			\end{itemize}
+% 		\end{enumerate}
+
+    \section*{Mentorship Experience}
+    \subsection*{Academic Advisees}
+    \begin{enumerate}
+        \item Melissa Martin \hfill PhD, Biostatistics \hfill 2024 - 
+        Present \\
+        \begin{minipage}{\linewidth}
+			\begin{flushleft}
+			{\small Co-advised with Ian Barnett, Ph.D.}
+			\end{flushleft}
+		\end{minipage}
+    \end{enumerate}
+
+    \subsubsection*{PhD Committee Membership}
+    \begin{enumerate}
+        \item Jimmy Kelliher (Chair) \hfill 2024 - Present
+    \end{enumerate}
+    
+    \subsection*{Biostatistics Ph.D. Lab Rotation Advisees}
+    \begin{enumerate}
+    	\item Ryan Jasper \hfill Fall 2024
+    	\item Meghan Gerety \hfill Spring 2024 - Present \\
+        \begin{minipage}{\linewidth}
+			\begin{flushleft}
+			{\small Co-advised with Rebecca Hubbard, Ph.D., in Spring 2024}
+			\end{flushleft}
+		\end{minipage}
+    \end{enumerate}
+    
+    \subsection*{Masters of Science in Clinical Epidemiology Students}
+    \begin{enumerate}
+    	\item \textbf{Thesis Advisor} (Biostatistics), Emily Moin, MD \hfill 2023-2025
+    	\item \textbf{Thesis Advisor} (Biostatistics), Eleanor Taranto, MD \hfill 2023-2025
+    \end{enumerate}
+	
+\section*{Consulting Experience}
+		\noindent \textbf{Statistical Consultant}
+		\begin{enumerate}
+			\item \textit{Committee for Children}, Seattle, WA \hfill May - December 2021
+		\end{enumerate}
+		
+		\noindent \textbf{Graduate Student Consultant}, \textsc{University of Michigan} 
+		\begin{enumerate}
+			\item \textit{Consulting for Statistics, Computing, and Analytics Research (CSCAR)} \hfill Fall 2018 
+%			\vspace{-\topsep}
+%			\begin{itemize}
+%			    \itemsep-1.4em
+%			    \item Held one-hour walk-in consulting sessions on study design, sample size, data management, data visualization, and statistical analysis.
+%			\end{itemize}
+		\end{enumerate}
+		 
+		 
+	\section*{Presentations and Posters}
+	
+	\subsection*{Presentations at Scientific Meetings}
+
+	\begin{enumerate}
+        \item How to ask the right question: Choosing estimands for health policy research
+        \begin{conflist}
+            \item ENAR Spring Meeting. New Orleans, LA. March 2025. \textit{Invited.}
+        \end{conflist}
+		\item Target trials in policy evaluation: A case study in medical cannabis laws
+		\begin{conflist}
+			\item Society for Epidemiologic Research Annual Meeting. Portland, OR. June 2023. \textit{Invited.}
+		\end{conflist}		
+		\item Handling correlation in stacked difference-in-differences estimates with application to medical cannabis policy
+		\begin{conflist}
+			\item International Conference on Computational and Methodological Statistics. Berlin, Germany. December 2023. \textit{Invited.}
+			\item American Causal Inference Conference. Austin, TX. May 2023.
+			\item Joint Statistical Meetings. Washington, DC. August 2022.
+		\end{conflist}
+		\item Ready to Roll? Practical guidance on whether and when to aggregate data in health policy evaluation
+		\begin{conflist}
+			\item International Conference on Health Policy Statistics. Scottsdale, AZ. January 2023.
+		\end{conflist}\item Policy evaluation in the real world: Experiences with translating cutting-edge methods for an applied audience
+		\begin{conflist}
+			\item American Causal Inference Conference. Berkeley, CA. May 2022.
+		\end{conflist}
+		\item Budgeting SMART: Sample size and repeated measures with a cost  constraint in a longitudinal sequential, multiple-assignment randomized trial.
+		\begin{conflist}
+			\item  ENAR Spring Meeting. Virtual. March 2021.
+		\end{conflist}
+		\item Sample size and timepoint tradeoffs for comparing dynamic treatment regimens in a longitudinal SMART.
+		\begin{conflist}
+			\item Joint Statistical Meetings. Virtual. August 2020.
+		\end{conflist}
+		\item Design considerations for comparing dynamic treatment regimens  in a longitudinal SMART.
+		\begin{conflist}
+			\item ENAR Spring Meeting. Virtual. March 2020.
+		\end{conflist}
+		\item Sample size considerations for comparing dynamic treatment regimes in a SMART with a longitudinal outcome.
+		\begin{conflist}
+			\item International Conference on Computational and Methodological Statistics. London, UK. December 2019
+			\item Joint Statistical Meetings. Denver, CO. July 2019.
+		\end{conflist}
+		\item Sample size considerations for comparing dynamic treatment regimens in a sequentially-randomized trial with a continuous longitudinal outcome.
+		\begin{conflist}
+			\item Society for Clinical Trials Annual Meeting. New Orleans, LA.  May 2019.
+		\end{conflist}
+		\item Sample size considerations for comparing dynamic treatment regimens in a sequential multiple-assignment randomized trial with a continuous longitudinal outcome.
+		\begin{conflist}
+			\item Joint Statistical Meetings. Vancouver, BC, Canada. July 2018.
+			\item ENAR Spring Meeting. Atlanta, GA.  March 2018.
+		\end{conflist}		
+	\end{enumerate}
+
+	\subsection*{Invited Colloquia}
+	\begin{enumerate}
+		\item Using individual-level data in difference-in-differences for health policy evaluation.
+		\begin{conflist}
+			\item Department of Biostatistics and Data Science, Wake Forest University School of Medicine. Virtual. March 2023.
+			\item Department of Biostatistics, Epidemiology and Informatics, University of Pennsylvania Perelman Medical School. Virtual. March 2023.
+			\item Department of Public Health Sciences, Henry Ford Health. Virtual. February 2023.
+			\item Division of Biostatistics, Northwestern University Feinberg School of Medicine. Chicago, IL. January 2023.
+			\item Departments of Population Health Sciences and Biostatistics and Medical Informatics, University of Wisconsin-Madison. Madison, WI. January 2023.
+			\item Department of Biostatistics, University of Colorado Anschutz Medical Campus. Virtual. January 2023.
+			\item Johns Hopkins ALACRITY Center Research in Progress Meeting. Virtual. November 2022.
+		\end{conflist}
+		\item A brief introduction to multi-stage trials for developing dynamic treatment regimens.
+		\begin{conflist}
+			\item MNeuroNetwork Lab Seminar, University of Michigan. Virtual.  March 2022. 
+			\item Working Group on Clinical Research, University of Rochester Medical Center. Virtual. October 2021.
+		\end{conflist}
+		\item Design, analysis, and sizing of sequential multiple assignment randomized trials with binary outcomes.
+		\begin{conflist}
+			\item Graduate Student Statistical Topics Seminar Series, Department of Statistics, University of Michigan. September 2015.
+		\end{conflist}
+	\end{enumerate}
+
+	\subsection*{Posters}
+	\begin{enumerate}
+		\item ``Ready to roll? Practical guidance on whether and when to aggregate data in health policy evaluation''
+		\begin{conflist}
+			\item AcademyHealth Annual Research Meeting. Washington, DC. June 2022.
+		\end{conflist}
+		\item Sample size considerations for comparing dynamic treatment regimens in  a sequential multiple-assignment randomized trial with a continuous longitudinal outcome.
+		\begin{conflist}
+			\item Michigan Student Symposium for Interdisciplinary Statistical Sciences. Ann Arbor, MI. March 2019.
+			\item Thomas R. Ten Have Symposium on Statistics in Mental Health. Chicago, IL. June 2018.
+		\end{conflist}
+		\item Sample size considerations for the analysis of continuous repeated-measures outcomes in sequential multiple-assignment randomized trials.
+		\begin{conflist}
+			\item Michigan Student Symposium for Interdisciplinary Statistical Sciences. Ann Arbor, MI. March 2017.
+		\end{conflist}
+		\item A SMART web-based sample size calculator.
+		\begin{conflist}
+			\item Michigan Student Symposium for Interdisciplinary Statistical Sciences. Ann Arbor, MI. March 2015.
+			\item IMPACT Symposium III: Advances in Clinical Trial Statistics: Multiplicity Adjustment and SMARTs. Cary, NC. November 2014.
+		\end{conflist}
+	\end{enumerate}
+
+\section*{Research Grants}
+\subsection*{Funded}
+\begin{enumerate}
+	\item Impact of U.S. State Recreational Cannabis Laws on Opioid Prescribing for Chronic Non-Cancer Pain and Statistical Methods for Informative Policy Adoption
+		\begin{description}[noitemsep, topsep=0pt, labelindent=1em]
+		\item[Role] Principal Investigator
+		\item[Funding Source] Thomas B. McCabe and Jeannette E. Laws McCabe Fund \\ \url{https://www.med.upenn.edu/evdresearch/mccabe-fund.html}
+		\item[Funding Level] Pilot Award, 7/1/24 - 12/31/25: \$36,347
+		%		\item[Main Objective]  To use mixed-methods to characterize the implementation and evaluate the effect of state medical cannabis laws on receipt of guideline-discordant opioid and guideline-concordant non-opioid treatment among patients diagnosed with chronic non-cancer pain.
+	\end{description}
+\end{enumerate}
+
+% \begin{enumerate}
+% 	\item State Medical Cannabis Laws, Chronic Pain, and Opioids: A Mixed-Methods Approach
+% 	\begin{description}[noitemsep, topsep=0pt, labelindent=1em]
+% 		\item[Principal Investigator] Beth McGinty (1R01DA049789)
+% 		\item[Funding Source] National Institutes of Health, National Institute on Drug Abuse
+% %		\item[Funding Level] 7/1/20-6/30/24: \$1,751,547 (direct)
+% %		\item[Main Objective]  To use mixed-methods to characterize the implementation and evaluate the effect of state medical cannabis laws on receipt of guideline-discordant opioid and guideline-concordant non-opioid treatment among patients diagnosed with chronic non-cancer pain.		
+% 		\item[Role] Investigator 
+% 	\end{description}
+% \end{enumerate}
+% \subsection*{Under Review}
+% 	\begin{enumerate}
+% 		\item Center to Accelerate Translation of Interventions to Decrease Premature Mortality in SMI
+% 		\begin{description}[noitemsep, topsep=0pt, labelindent=1em]
+% 			\item[Principal Investigator] Gail L. Daumit
+% 			\item[Funding Source] National Institutes of Health, National Institute of Mental Health
+% 			\item[Role] Project Leader, Methods Core (PI: E.A. Stuart) 
+% 			\item[Submission Target] May 2023
+% 		\end{description}
+% 	\end{enumerate}
+% %\subsection*{Pending Submission}
+% \subsection*{Not Funded}
+% \begin{enumerate}
+% 	\item iHear: Digital Hearing Healthcare Delivery Platform for OTC Hearing Aids
+% 	\begin{description}[noitemsep, topsep=0pt, labelindent=1em]
+% 		\item[Principal Investigators] Sumitrajit Dhar and Larry Humes
+% 		\item[Funding Source] National Institutes of Health, National Institute on Deafness and Other Communication Disorders
+% 		\item[Role] Consultant, statistics and trial design
+% 	\end{description}
+% \end{enumerate}	
+
+\section*{Software}
+
+	\begin{enumerate}
+		\item SMARTsize: A sample size calculator for sequential, multiple-assignment, randomized trials with binary or continuous outcomes in which the primary aim is to compare two embedded dynamic treatment regimes. \\ \url{https://nseewald1.shinyapps.io/SMARTsize/}
+		\item MRT-SS Calculator: A sample size calculator for micro-randomized trials in which the primary aim is to detect the proximal effect of providing an intervention.\\ \url{https://pengliao.shinyapps.io/mrt-calculator/}
+	\end{enumerate}
+
+\section*{Professional Service}
+	
+	\subsection*{Public Training Materials}
+	
+	\begin{enumerate}
+		\item ``Building Effective Adaptive Interventions in Mental Health Services Research.'' \\
+		Johns Hopkins ALACRITY Center for Health and Longevity in Mental Illness \\
+		\url{https://youtube.com/playlist?list=PLj4-nn-p-zv1o-cR9jiITTRfgkwmyqjoD}
+	\end{enumerate}
+
+	\subsection*{Workshop Design and Facilitation}
+		
+	\begin{enumerate}
+		\item ``Embedding Qualitative and Quantitative Methods for Policy Evaluation''
+        \begin{conflist}
+            \item Invited pre-conference workshop: 15th International Conference on Health Policy Statistics, San Diego, CA. January 6, 2024. \textit{Co-designer and facilitator with Beth McGinty, Ph.D. and Eli Ben-Michael, Ph.D.}
+        \end{conflist}
+        
+		\item ``SMART Designs for Developing Adaptive Interventions''
+		\begin{conflist}
+			\item Statistical Horizons, Virtual. August 19-23, 2024.
+		\end{conflist}
+        
+		\item ``Introduction to Adaptive Interventions and Sequential Multiple Assignment Randomized Trials''
+		\begin{conflist}[noitemsep]
+			\item Invited pre-conference workshop: Society of Behavioral Medicine Annual Meeting, Baltimore, MD. April 6, 2022. \textit{Co-designer and facilitator with Ahnalee Brincks, Ph.D., and Shawna N. Smith, Ph.D.}
+		\end{conflist}
+		
+		\item ``Building Just-in-Time Adaptive Interventions.'' 
+		\begin{conflist}[noitemsep]
+			\item Center for Dissemination and Implementation Science Summer Institute, University of Illinois Chicago. Virtual. October 25-26, 2021. \textit{Small group expert facilitator}.
+		\end{conflist}
+		
+		\item ``Using SMART Design in Responsive Survey Design.'' 
+		\begin{conflist}
+			\item Responsive Survey Design: A Research Education Program. 
+			Institute for Social Research, University of Michigan. June 19, 2019. \textit{Co-designer and facilitator with Ahnalee Brincks, Ph.D.}
+		\end{conflist}
+		
+		\item ``Getting SMART about Adaptive Interventions in Education.''
+		\begin{conflist}
+			\item Institute of Education Sciences-funded training institute at the University of Michigan. March 11-14, 2019. \textit{Co-designer and facilitator with d$^3$lab} \href{https://d3c.isr.umich.edu/}{\texttt{d3lab.isr.umich.edu}}.
+		\end{conflist}
+        
+		\item ``Getting SMART: Experimental Design and Analysis Methods for Developing Adaptive Interventions''
+		\begin{conflist}
+			\item University of California, San Francisco. May 19, 2015. \textit{Co-facilitator with Inbal Nahum-Shani, Ph.D.}
+		\end{conflist}
+        
+		\item ``Experimental Design and Analysis Methods for Developing Adaptive Interventions: Getting SMART''
+		\begin{conflist}
+			\item Methodology Center Summer Institute. Ann Arbor, MI. June 19-20, 2014. \textit{Small group facilitator}.
+		\end{conflist}
+	\end{enumerate}
+
+	\subsection*{Peer Review and Editorial Activities}
+    \subsubsection*{Editorial}
+    \begin{enumerate}
+        \item Guest Academic Editor, PLOS Medicine
+    \end{enumerate}
+        
+    \subsubsection*{Ad hoc Reviewer}
+	\begin{enumerate}[noitemsep,leftmargin = 1.25em]
+		\item[] American Journal of Epidemiology
+		\item[] American Journal of Public Health
+		\item[] Annals of Applied Statistics
+		\item[] Behavior Research Methods
+        \item[] BMJ
+        \item[] Contemporary Clinical Trials
+		\item[] Frontiers in Digital Health
+        \item[] Health Services Research
+        \item[] JAMA Health Forum
+		\item[] Journal of the American Statistical Association (Theory and Methods)
+		\item[] Pharmacoepidemiology and Drug Safety
+		\item[] Psychological Methods
+		\item[] R Journal
+		\item[] Statistics and Public Policy
+		\item[] Statistics in Medicine
+		\item[] Value in Health
+	\end{enumerate}
+	
+	\subsection*{Departmental Service}
+    \begin{enumerate}
+        \item Member, Student Recruitment Committee. Department of Biostatistics, Epidemiology, and Informatics, University of Pennsylvania. 2023 - Present.
+        \item Student Representative, Faculty Diversity, Equity, and Inclusion Committee. Department of Statistics, University of Michigan. AY 2020-2021.
+	    \item Co-Lead, Graduate Student Instructor Foundations Colloquium. Department of Statistics, University of Michigan. AY 2020-2021.
+	    \item Steering Committee Member, Graduate Student Diversity, Equity, and Inclusion Working Group. Department of Statistics, University of Michigan. 2020-2021.
+	\end{enumerate}
+
+	\subsection*{Professional Memberships}
+	\begin{enumerate}[noitemsep, leftmargin = 1.25em]
+		\item[] American Statistical Association (2015 - present)
+		\item[] International Biometrics Society, Eastern North American Region (ENAR) (2015 - present)
+        \item[] Society for Causal Inference (2023 - present)
+		\item[] Society for Clinical Trials (2015 - 2021)
+		\item[] Society of Industrial and Applied Mathematics (SIAM) (2020-2021)
+		\item[] Society of Behavioral Medicine (2022 - 2023)
+	\end{enumerate}
+
+    \subsection*{Organizational Activities}
+    \begin{enumerate}
+        \item Session Chair, ENAR Spring Meeting. March 2025.
+        \item Chair, Diversity Equity and Inclusion Committee. Society for Causal Inference. 2025 - present.
+        \item Member, Program Committee, 17th Annual Conference on Statistical Issues in Clinical Trials. University of Pennsylvania. 2024-2025.
+        \item Member, Outreach Committee, 15th International Conference on Health Policy Statistics. 2024.
+        \item Session Chair, 14th International Conference on Health Policy Statistics. January 2023.
+        \item Session Chair, Joint Statistical Meetings. August 2022.
+    \end{enumerate}
+
+	\subsection*{Professional Development}
+	
+	\renewcommand{\arraystretch}{1.25}
+	\begin{enumerate}
+		\item U-M Graduate Teacher Certificate. Rackham Graduate School and Center for Research on Learning and Teaching, University of Michigan. Completed April 2021. \href{https://crlt.umich.edu/um.gtc/description}{crlt.umich.edu/um.gtc} 
+		\item Inclusive STEM Teaching Project. Completed December 2020. \href{https://www.inclusivestemteaching.org/}{inclusivestemteaching.org}
+		\item Preparing to Teach: Workshop to prepare graduate students for a role as undergraduate faculty responsible for teaching statistics and data science. May 2020. \href{https://preparingtoteach.org/}{preparingtoteach.org}
+		\item Professional Development Diversity, Equity, and Inclusion Certificate. Rackham Graduate School, University of Michigan. Completed April 2020. \href{https://rackham.umich.edu/professional-development/dei-certificate/}{rackham.umich.edu}
+	\end{enumerate}
+%
+%\section*{References}
+%\begin{center}
+%	\small
+%\begin{minipage}[t]{.3\textwidth}
+%	\textbf{Elizabeth A. Stuart, Ph.D.} \\
+%	Johns Hopkins Bloomberg School of Public Health \\
+%	624 N. Broadway \\
+%	Hampton House 839 \\
+%	Baltimore, MD 21205\\
+%	(410) 502-6222 \\
+%	\href{mailto:estuart@jhu.edu}{estuart@jhu.edu}
+%\end{minipage}
+%\hspace{.06\textwidth}
+%\begin{minipage}[t]{.3\textwidth}
+%	\textbf{Beth McGinty, Ph.D.} \\
+%	Weill Cornell Medicine \\
+%	402 E. 67th St \\
+%	LA-213 \\
+%	New York, NY 10065\\
+%	(646) 962-8038 \\
+%	\href{mailto:emm4010@med.cornell.edu}{emm4010@med.cornell.edu}
+%\end{minipage}
+%\hspace{.01\textwidth}
+%\begin{minipage}[t]{.3\textwidth}
+%	\textbf{Daniel Almirall, Ph.D.} \\
+%	University of Michigan \\
+%	426 Thompson Street \\
+%	2448 Institute for Social Research \\
+%	Ann Arbor, MI 48104 \\
+%	(734) 936-3077 \\
+%	\href{mailto:dalmiral@umich.edu}{dalmiral@umich.edu}
+%\end{minipage}
+%\end{center}
+
+\end{document}
