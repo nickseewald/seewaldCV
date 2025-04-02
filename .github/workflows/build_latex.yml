@@ -43,4 +43,7 @@ jobs:
           overwrite: true
           body: "Automatic release through Github Actions"
           make_latest: true
-          
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "[create-pull-request] build_latex"
