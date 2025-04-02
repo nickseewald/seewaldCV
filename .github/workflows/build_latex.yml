@@ -1,0 +1,42 @@
+# Customized from https://github.com/zonca/overleaf_github/blob/main/.github/workflows/build_latex.yml
+# https://www.zonca.dev/posts/2023-02-02-github-overleaf
+
+name: Build Latex document
+
+# Controls when the action will run.
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  create:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: Seewald-Curriculum-Vitae.tex
+      - uses: actions/upload-artifact@v3
+        with:
+          name: PDF
+          path: Seewald-Curriculum-Vitae.pdf
+      - name: Upload binaries to release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: Seewald-Curriculum-Vitae.pdf
+          asset_name: Seewald-Curriculum-Vitae_$tag.pdf
+          tag: ${{ github.ref }}
+          overwrite: true
+          body: "Automatic release through Github Actions"
