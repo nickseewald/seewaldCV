@@ -22,11 +22,12 @@
 \usepackage{enumitem}
 \usepackage{titling}
 \usepackage{titlesec}
-\usepackage[toc,enum,bib,lineno,eqno]{tabfigures}
+\usepackage{float}
+% \usepackage[toc,enum,bib,lineno,eqno]{tabfigures}
 \usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+% \usepackage{ltablex} % longtable for tabularx?
 \usepackage{tabularx}
-\usepackage{ltablex} % longtable for tabularx?
-\usepackage{multirow}
+% \usepackage{multirow}
 \usepackage{hyphenat}
 
 \usepackage{hyperref} % Required for adding links	and customizing them
@@ -74,6 +75,7 @@
 }
 
 \begin{document} 
+
 	\begin{center}
 		\headingfont
 		\huge{\textbf{Nicholas J. Seewald, Ph.D.}} \\
@@ -87,6 +89,9 @@
 	\faGithub  \  \href{https://www.github.com/nickseewald}{\texttt{nickseewald}}
 \end{center}
 
+	\thispagestyle{firstpage} % suppress footer on this page
+	\hyphenation{post-meno-pausal} % fix weird hyphenation in paper title
+
 % CONTACT ----------------------------------------------
 
 	\section*{Professional Data}
@@ -99,50 +104,71 @@
 		Philadelphia, PA 19104
 	\end{minipage}
 
-	\thispagestyle{firstpage} % suppress footer on this page
-	\hyphenation{post-meno-pausal} % fix weird hyphenation in paper title
-
 % EDUCATION ------------------------------------------
 
 	\section*{Education}
-	\vspace{-.8\textfloatsep}
-	\renewcommand{\arraystretch}{1.25}
-	\begin{tabularx}{.99\textwidth}{p{16mm}p{9mm}X}
-		2021 & Ph.D. & Statistics. University of Michigan. \\
-		&  & 
-		\hspace{3mm}\begin{minipage}{.99\linewidth}
-			\begin{flushleft}
-			{\small Advised by Daniel Almirall, Ph.D.} \\
-			\small ``Design and Analytic Considerations for Sequential, Multiple\hyp{}Assignment Randomized Trials with Continuous Longitudinal Outcomes.'' \href{https://dx.doi.org/10.7302/2671}{DOI: \texttt{n4r2}}
-			\end{flushleft}
-		\end{minipage} \vspace{\itemsep} \\
-		2018 & M.A. & Statistics. University of Michigan. \\[\itemsep]
-		2015 & M.S. & Biostatistics. University of Michigan. \\[\itemsep]
-		2013 & B.S. & Mathematics (with Life Science), \textit{cum laude}. University of Notre Dame.
-	\end{tabularx}
-	\renewcommand{\arraystretch}{1}
+	\vspace{-.4\textfloatsep}
+  	\renewcommand{\arraystretch}{1.25}
+
+    \begin{tabularx}{.99\textwidth}{>{\setlength\hsize{.005\hsize}\raggedright}X>{\setlength\hsize{.07\hsize}\raggedright}X@{} >{\setlength\hsize{.875\hsize}\raggedright}X>{\setlength\hsize{.05\hsize}\raggedleft}X}
+        \multicolumn{3}{l}{\textbf{University of Michigan,} Ann Arbor, MI.} & \tabularnewline
+        & Ph.D. & Statistics & 2021 \tabularnewline 
+        & & {\small \textit{Design and Analytic Considerations for Sequential, Multiple\hyp{}Assignment Randomized Trials with Continuous Longitudinal Outcomes.} 
+			\small Advised by Daniel Almirall, Ph.D.} 
+			\href{https://dx.doi.org/10.7302/2671}{DOI: \texttt{n4r2}}\tabularnewline
+        & M.A. & Statistics & 2018 \tabularnewline
+        & M.S. & Biostatistics & 2015 \tabularnewline[.5em]
+        \multicolumn{3}{l}{\textbf{University of Notre Dame,} Notre Dame, IN.} & \tabularnewline
+        & B.S. & Mathematics (with Life Science), \textit{cum laude} & 2013 
+    \end{tabularx}
+
+    
+	% \renewcommand{\arraystretch}{1.25}
+	% \begin{tabularx}{.99\textwidth}{p{16mm}p{9mm}X}
+	% 	2021 & Ph.D. & Statistics. University of Michigan. \\
+	% 	&  & 
+	% 	\hspace{3mm}\begin{minipage}{.99\linewidth}
+	% 		\begin{flushleft}
+	% 		{\small Advised by Daniel Almirall, Ph.D.} \\
+	% 		\small ``Design and Analytic Considerations for Sequential, Multiple\hyp{}Assignment Randomized Trials with Continuous Longitudinal Outcomes.'' \href{https://dx.doi.org/10.7302/2671}{DOI: \texttt{n4r2}}
+	% 		\end{flushleft}
+	% 	\end{minipage} \vspace{\itemsep} \\
+	% 	2018 & M.A. & Statistics. University of Michigan. \\[\itemsep]
+	% 	2015 & M.S. & Biostatistics. University of Michigan. \\[\itemsep]
+	% 	2013 & B.S. & Mathematics (with Life Science), \textit{cum laude}. University of Notre Dame.
+	% \end{tabularx}
+	% \renewcommand{\arraystretch}{1}
 	
-	\section*{Academic Positions}
-	\vspace{-.8\textfloatsep}
-	\renewcommand{\arraystretch}{1.25}
-	\begin{tabularx}{.99\textwidth}{p{16mm}X}
-		2023-   & Assistant Professor, University of Pennsylvania, Perelman School of Medicine. \\[-1.5mm]
-		&
-		\hspace{3mm}\begin{minipage}{\linewidth}
-			\begin{flushleft}
-				{\small Department of Biostatistics, Epidemiology, and Informatics}
-			\end{flushleft} 
-		\end{minipage} \\
-		2021-23 &  Postdoctoral Fellow, Johns Hopkins Bloomberg School of Public Health. \\
-		&
-		\hspace{3mm}\begin{minipage}{\linewidth}
-			\begin{flushleft}
-				{\small Department of Health Policy and Management} \\[-0.5mm]
-				{\small Advised by Elizabeth A. Stuart, Ph.D. and Emma E. (Beth) McGinty, Ph.D.}
-			\end{flushleft} 
-		\end{minipage}
-	\end{tabularx}
-	\renewcommand{\arraystretch}{1}
+	\section*{Faculty \& Research Positions}
+	\vspace{-.4\textfloatsep} 
+
+	% \renewcommand{\arraystretch}{1}
+
+    \begin{tabularx}{.99\textwidth}{>{\setlength\hsize{.005\hsize}\raggedright}X >{\setlength\hsize{.80\hsize}\raggedright}X@{}>{\setlength\hsize{.17\hsize}\raggedleft}X}
+        \multicolumn{2}{l}{\textbf{University of Pennsylvania,} Philadelphia, PA.} & \tabularnewline
+        & Senior Scholar, Center for Clinical Epidemiology and Biostatistics & 2025- \tabularnewline
+        & Assistant Professor of Biostatistics & 2023- \tabularnewline[.5em]
+        \multicolumn{2}{l}{\textbf{Johns Hopkins Bloomberg School of Public Health,} Baltimore, MD.} & \tabularnewline
+        & Postdoctoral Fellow, Department of Health Policy and Management \\ {\small Advised by Elizabeth A. Stuart, Ph.D. and Emma E. (Beth) McGinty, Ph.D.} & 2021-2023 
+    \end{tabularx}
+
+    
+    
+	% \begin{tabularx}{.99\textwidth}{p{16mm}X}
+	% 	\multicolumn{2}{l}{University of Pennsylvania Perelman School of Medicine} \\[.5em]
+ %        \small 2025- & \small Senior Scholar, Center for Epidemiology and Biostatistics \\
+	% 	\small 2023- & \small Assistant Professor of Biostatistics \\[.5em]
+
+ %        \multicolumn{2}{l}{Johns Hopkins Bloomberg School of Public Health} \\
+	% 	2021-2023 &
+	% 	\hspace{3mm}\begin{minipage}{\linewidth}
+	% 		\begin{flushleft}
+	% 			{\small Department of Health Policy and Management} \\[-0.5mm]
+	% 			{\small Advised by Elizabeth A. Stuart, Ph.D. and Emma E. (Beth) McGinty, Ph.D.}
+	% 		\end{flushleft} 
+	% 	\end{minipage}
+	% \end{tabularx}
+	% \renewcommand{\arraystretch}{1}
 	
 	\section*{Awards}
 	\begin{enumerate}
@@ -232,6 +258,18 @@
  		
  		% \item Hertz, D.L., Kidwell, K.M., \textbf{Seewald, N.J.}, Gersch, C.L., Desta, Z., Flockhart, D.A., Storniolo, A.M., Stearns, V., Skaar, T.C., Hayes, D. F., Henry, N.L., and Rae, J.M. (2015), ``CYP3A4*22 polymorphism is associated with increased exemestane concentrations in postmenopausal breast cancer patients'' [abstract]. Proceedings of the Thirty-Eighth Annual CTRC-AACR San Antonio Breast Cancer Symposium: 2015 Dec 8-12; San Antonio, TX. Philadelphia (PA): AACR.
  	\end{enumerate}
+
+    \subsection*{Under Review}
+	    \begin{enumerate}
+            \item Anbil S, \textbf{Seewald NJ}, Chiorean EG, Hussein M, Kasi PM, Laux DE, Schwartz GK, Shapiro G, Lin KK, Craib M, Maloney L, McLachlan K, Tukachinsky H, Schrock AB, Wang S, Sokol ES, Decker B, Nathanson KL, Domchek SM, Reiss KA ''LODESTAR: A Single Arm Phase II Study of Rucaparib in Solid Tumors with Pathogenic Germline or Somatic Variants in Homologous Recombination Repair Genes.'' Under invited revision at \textit{JCO Precision Oncology}.
+        
+            \item Stone EM, \textbf{Seewald NJ}, Rosen JG ``The Impact of Medicaid Expansion on HIV Pre-Exposure Prophylaxis Coverage.'' Under invited revision at \textit{Health Affairs}.
+            
+            \item Eisenberg MD, Tormohlen KN, McCourt AD, Yu J, Neupane R, Ge Y, Rutkow L, Stuart EA, Fingerhood M, \textbf{Seewald NJ}, McGinty, EE ``Impact of State Telemedicine Policies on Substance Use Disorder (SUD) Treatment During COVID-19.'' Submitted to \textit{JAMA}.
+	%     	\item \textbf{Seewald, N.J.}, Almirall, D. ``Sample size and timepoint tradeoffs for comparing dynamic treatment regimens in a longitudinal SMART.''
+	%         \item \textbf{Seewald, N.J.}, Almirall, D. ``longsmart: An R package for design and simulation of SMARTs with longitudinal outcomes.''
+	%         \item \textbf{Seewald, N.J.}, McGinty, E.E., Tormohlen, K., Griffin B.A., Stuart, E.A. ``Ready to Roll? Whether and when to aggregate individual-level data in state health policy evaluation.'' 
+	    \end{enumerate}
 	
 	\subsection*{Other Publications and Preprints}
 		\begin{enumerate}			
@@ -246,13 +284,6 @@
             \item Morabia A (host), Chakraborty B, \textbf{Seewald NJ} (2023) ``SMART and MRT - Emerging methods in public health,'' \textit{AJPH Podcast}, American Public Health Association. September 13. Available at \url{https://youtu.be/TER4kRJpCh0}.
         \end{enumerate}
 		
-	% \subsection*{In Preparation and Under Review}
-	%     \begin{enumerate}
- %            \item Eisenberg MD, Tormohlen KN, McCourt AD, Yu J, Neupane R, Ge Y, Rutkow L, Stuart EA, Fingerhood M, \textbf{Seewald NJ}, McGinty, EE ``Impact of State Telemedicine Policies on Substance Use Disorder (SUD) Treatment During COVID-19.''
-	%     	\item \textbf{Seewald, N.J.}, Almirall, D. ``Sample size and timepoint tradeoffs for comparing dynamic treatment regimens in a longitudinal SMART.''
-	%         \item \textbf{Seewald, N.J.}, Almirall, D. ``longsmart: An R package for design and simulation of SMARTs with longitudinal outcomes.''
-	%         \item \textbf{Seewald, N.J.}, McGinty, E.E., Tormohlen, K., Griffin B.A., Stuart, E.A. ``Ready to Roll? Whether and when to aggregate individual-level data in state health policy evaluation.'' 
-	%     \end{enumerate}
 	
 	\section*{Teaching Experience}
 	
@@ -260,19 +291,19 @@
 	
 		\textbf{Course Director}, \textsc{University of Pennsylvania Perelman School of Medicine}
 		\begin{enumerate}
-			\item \textit{BSTA 6100: Biostatistical Methods for Epidemiology} \hfill Fall 2024
+			\item[] \textit{BSTA 6100: Biostatistical Methods for Epidemiology} \hfill Fall 2024
 		\end{enumerate}
 	
 		\noindent \textbf{Co-Instructor}, \textsc{Johns Hopkins Bloomberg School of Public Health}
 		\begin{enumerate}
-			\item \textit{Seminar on Statistical Methods for Mental Health} \hfill Term 1, AY 2022-3 \\
+			\item[] \textit{Seminar on Statistical Methods for Mental Health} \hfill Term 1, AY 2022-3 \\
 			\textit{Promises and Pitfalls of Prediction Models in Mental Health Research} \\
 			Co-taught with Trang Q. Nguyen, Ph.D.
 		\end{enumerate}
 		
 		\noindent \textbf{Guest Lecturer}, \textsc{Johns Hopkins Bloomberg School of Public Health}
 		\begin{enumerate}
-			\item \textit{Seminar on Statistical Methods for Mental Health} \hfill Term 3, AY 2021-2 \\
+			\item[] \textit{Seminar on Statistical Methods for Mental Health} \hfill Term 3, AY 2021-2 \\
 			``Difference in Differences with Variable Treatment Timing.'' \\
 			Instructor: Elizabeth A. Stuart, Ph.D.
 		\end{enumerate}
@@ -631,6 +662,7 @@
 		\item[] Behavior Research Methods
         \item[] BMJ
         \item[] Contemporary Clinical Trials
+        \item[] Data Science in Science
 		\item[] Frontiers in Digital Health
         \item[] Health Services Research
         \item[] JAMA Health Forum
