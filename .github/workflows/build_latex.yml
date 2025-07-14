@@ -43,14 +43,14 @@ jobs:
           overwrite: true
           body: "Automatic release through Github Actions"
           make_latest: true
-      - name: commit & push pdf
-        run: |
-              git config --global user.name 'GitHub Actions'
-              git config --global user.email 'nick@nickseewald.com'
-              git add Seewald-Curriculum-Vitae.pdf
-              git commit -m "Update generated PDF" || echo "No changes to commit"
-              git push
-      #- name: Create PR
-      #  uses: peter-evans/create-pull-request@v7
-      #  with:
-      #    commit-message: "[create-pull-request] build_latex"
+      # - name: commit & push pdf
+      #   run: |
+      #         git config --global user.name 'GitHub Actions'
+      #         git config --global user.email 'nick@nickseewald.com'
+      #         git add Seewald-Curriculum-Vitae.pdf
+      #         git commit -m "Update generated PDF" || echo "No changes to commit"
+      #         git push
+      - name: Create PR
+       uses: peter-evans/create-pull-request@v7
+       with:
+         commit-message: "[create-pull-request] build_latex"
