@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.7.1)  14 JUL 2025 18:37
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.7.1)  24 JUL 2025 18:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -677,7 +677,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 [2]
-Overfull \hbox (5.58887pt too wide) in paragraph at lines 208--209
+Overfull \hbox (5.58887pt too wide) in paragraph at lines 210--211
 []\TU/IBMPlexSans(0)/m/n/10.95 McGinty EE, Bicket MC, \TU/IBMPlexSans(0)/b/n/10
 .95 Seewald NJ\TU/IBMPlexSans(0)/m/n/10.95 , Stuart EA, Alexander GC, Barry, CL
 , McCourt AD, Rutkow,
@@ -686,7 +686,7 @@ Overfull \hbox (5.58887pt too wide) in paragraph at lines 208--209
 
 
 [3]
-Overfull \hbox (10.43285pt too wide) in paragraph at lines 230--231
+Overfull \hbox (10.43285pt too wide) in paragraph at lines 232--233
 \TU/IBMPlexSans(0)/m/n/10.95 “Nonclassical oxygen atom transfer reactions of ox
 omolybdenum(vi) bis(catecholate).” \TU/IBMPlexSans(0)/m/it/10.95 Chem-
  []
@@ -694,7 +694,7 @@ omolybdenum(vi) bis(catecholate).” \TU/IBMPlexSans(0)/m/it/10.95 Chem-
 
 
 [4]
-Overfull \hbox (5.142pt too wide) in paragraph at lines 256--257
+Overfull \hbox (5.142pt too wide) in paragraph at lines 258--259
 []\TU/IBMPlexSans(0)/m/n/10.95 Hood R, \TU/IBMPlexSans(0)/b/n/10.95 Seewald NJ\
 TU/IBMPlexSans(0)/m/n/10.95 , Rathore S, Reiss KA (2024) ”Interaction of BRCA1 
 vs BRCA2 pathogenic
@@ -705,12 +705,12 @@ vs BRCA2 pathogenic
 [5]
 
 LaTeX Font Warning: Font shape `TU/IBMPlexSans(0)/m/sc' undefined
-(Font)              using `TU/IBMPlexSans(0)/m/n' instead on input line 299.
+(Font)              using `TU/IBMPlexSans(0)/m/n' instead on input line 310.
 
 
 
 [6]
-Overfull \hbox (4.7391pt too wide) in paragraph at lines 368--370
+Overfull \hbox (4.7391pt too wide) in paragraph at lines 386--388
 \TU/IBMPlexSans(0)/b/n/10.95 Teaching Assistant\TU/IBMPlexSans(0)/m/sc/10.95 , 
 Summer Program in Quantitative Methods of Social Research, Inter-university
  []
@@ -718,15 +718,15 @@ Summer Program in Quantitative Methods of Social Research, Inter-university
 
 
 [7]
-Overfull \hbox (0.91972pt too wide) in paragraph at lines 475--477
+
+[8]
+Overfull \hbox (0.91972pt too wide) in paragraph at lines 493--495
 []\TU/IBMPlexSans(0)/m/sc/10.95 Handling correlation in stacked difference-in-d
 ifferences estimates with application to med-
  []
 
 
-
-[8]
-Overfull \hbox (18.69891pt too wide) in paragraph at lines 509--511
+Overfull \hbox (18.69891pt too wide) in paragraph at lines 527--529
 []\TU/IBMPlexSans(0)/m/sc/10.95 Sample size considerations for comparing dynami
 c treatment regimens in a sequential multiple-
  []
@@ -734,7 +734,7 @@ c treatment regimens in a sequential multiple-
 
 
 [9]
-Overfull \hbox (18.69891pt too wide) in paragraph at lines 553--555
+Overfull \hbox (18.69891pt too wide) in paragraph at lines 571--573
 []\TU/IBMPlexSans(0)/m/sc/10.95 Sample size considerations for comparing dynami
 c treatment regimens in a sequential multiple-
  []
@@ -742,7 +742,7 @@ c treatment regimens in a sequential multiple-
 
 
 [10]
-Overfull \hbox (6.37943pt too wide) in paragraph at lines 624--627
+Overfull \hbox (6.37943pt too wide) in paragraph at lines 642--645
 [][]$[][][][][] [] [] [] [][][][][][][] [] [][][] [] [][][][][][][][] [] [][][]
 [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][]$[][] 
@@ -753,20 +753,22 @@ Overfull \hbox (6.37943pt too wide) in paragraph at lines 624--627
 [11]
 
 [12]
-Overfull \hbox (8.62805pt too wide) in paragraph at lines 727--728
+Overfull \hbox (8.62805pt too wide) in paragraph at lines 745--746
 []\TU/IBMPlexSans(0)/m/sc/10.95 Chair, Diversity Equity and Inclusion Committee
 . Society for Causal Inference. 2025 - present. 
  []
 
 
-Overfull \hbox (4.64223pt too wide) in paragraph at lines 738--739
+
+[13]
+Overfull \hbox (4.64223pt too wide) in paragraph at lines 756--757
 \TU/IBMPlexSans(0)/m/sc/10.95 Learning and Teaching, University of Michigan. Co
 mpleted April 2021. [][]crlt.umich.edu/um.gtc[][] 
  []
 
 
 
-[13] (./Seewald-Curriculum-Vitae.aux)
+[14] (./Seewald-Curriculum-Vitae.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-09>
@@ -780,12 +782,12 @@ d.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 15372 strings out of 468529
- 289763 string characters out of 5449559
- 773641 words of memory out of 5000000
- 43496 multiletter control sequences out of 15000+600000
+ 15375 strings out of 468529
+ 289802 string characters out of 5449559
+ 773650 words of memory out of 5000000
+ 43499 multiletter control sequences out of 15000+600000
  633338 words of font info for 104 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
  73i,11n,113p,1027b,576s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Seewald-Curriculum-Vitae.xdv (13 pages, 317828 bytes).
+Output written on Seewald-Curriculum-Vitae.xdv (14 pages, 333604 bytes).
