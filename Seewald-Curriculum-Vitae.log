@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.7.1)  24 JUL 2025 18:50
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.2)  3 OCT 2025 17:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,7 +6,7 @@ entering extended mode
 **Seewald-Curriculum-Vitae.tex
 (./Seewald-Curriculum-Vitae.tex
 LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-06-09>
+L3 programming layer <2025-09-02>
 (/opt/texlive/texdir/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
 (/opt/texlive/texdir/texmf-dist/tex/latex/base/size11.clo
@@ -58,7 +58,7 @@ Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count282
 )
 (/opt/texlive/texdir/texmf-dist/tex/latex/fmtcount/fmtcount.sty
-Package: fmtcount 2025/02/09 v3.10 Displaying the values of LaTeX counters (NT,
+Package: fmtcount 2025/08/23 v3.11 Displaying the values of LaTeX counters (NT,
 VB,NE)
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/base/ifthen.sty
@@ -124,7 +124,7 @@ LaTeX Info: Redefining \today on input line 736.
 (/opt/texlive/texdir/texmf-dist/tex/latex/fontspec/fontspec.sty
 (/opt/texlive/texdir/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 (/opt/texlive/texdir/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2025-06-09 L3 programming layer (loader) 
+Package: expl3 2025-09-02 L3 programming layer (loader) 
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2025-06-09 L3 backend support: XeTeX
@@ -134,10 +134,10 @@ File: l3backend-xetex.def 2025-06-09 L3 backend support: XeTeX
 ))
 Package: xparse 2024-08-16 L3 Experimental document command parser
 )
-Package: fontspec 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
+Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTe
+Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
 X
 \l__fontspec_script_int=\count312
 \l__fontspec_language_int=\count313
@@ -318,7 +318,7 @@ put line 265.
 
 Package xcolor Info: Driver file: xetex.def on input line 274.
 (/opt/texlive/texdir/texmf-dist/tex/latex/graphics-def/xetex.def
-File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+File: xetex.def 2025/09/29 v5.0o Graphics/color driver for xetex
 )
 (/opt/texlive/texdir/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
@@ -360,7 +360,7 @@ Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
 LaTeX Info: Redefining \_ on input line 43.
 )
 (/opt/texlive/texdir/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2025-06-21 v7.01n Hypertext links for LaTeX
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
@@ -411,7 +411,7 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 \Hy@pagecounter=\count331
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2025-06-21 v7.01n Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 )
 (/opt/texlive/texdir/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
@@ -419,22 +419,22 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 \Hy@SavedSpaceFactor=\count332
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2025-06-21 v7.01n Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 )
-Package hyperref Info: Hyper figures OFF on input line 4181.
-Package hyperref Info: Link nesting OFF on input line 4186.
-Package hyperref Info: Hyper index ON on input line 4189.
-Package hyperref Info: Plain pages OFF on input line 4196.
-Package hyperref Info: Backreferencing OFF on input line 4201.
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4448.
+Package hyperref Info: Bookmarks ON on input line 4462.
 \c@Hy@tempcnt=\count333
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4787.
+LaTeX Info: Redefining \url on input line 4801.
 \XeTeXLinkMargin=\dimen175
 
 (/opt/texlive/texdir/texmf-dist/tex/generic/bitset/bitset.sty
@@ -447,13 +447,13 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 \Fld@menulength=\count334
 \Field@Width=\dimen176
 \Fld@charsize=\dimen177
-Package hyperref Info: Hyper figures OFF on input line 6066.
-Package hyperref Info: Link nesting OFF on input line 6071.
-Package hyperref Info: Hyper index ON on input line 6074.
-Package hyperref Info: backreferencing OFF on input line 6081.
-Package hyperref Info: Link coloring OFF on input line 6086.
-Package hyperref Info: Link coloring with OCG OFF on input line 6091.
-Package hyperref Info: PDF/A mode OFF on input line 6096.
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
 \Hy@abspage=\count335
 \c@Item=\count336
 \c@Hfootnote=\count337
@@ -461,7 +461,7 @@ Package hyperref Info: PDF/A mode OFF on input line 6096.
 Package hyperref Info: Driver (autodetected): hxetex.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/hyperref/hxetex.def
-File: hxetex.def 2025-06-21 v7.01n Hyperref driver for XeTeX
+File: hxetex.def 2025-07-12 v7.01o Hyperref driver for XeTeX
 \pdfm@box=\box59
 \c@Hy@AnnotLevel=\count338
 \HyField@AnnotCount=\count339
@@ -677,7 +677,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 [2]
-Overfull \hbox (5.58887pt too wide) in paragraph at lines 210--211
+Overfull \hbox (5.58887pt too wide) in paragraph at lines 212--213
 []\TU/IBMPlexSans(0)/m/n/10.95 McGinty EE, Bicket MC, \TU/IBMPlexSans(0)/b/n/10
 .95 Seewald NJ\TU/IBMPlexSans(0)/m/n/10.95 , Stuart EA, Alexander GC, Barry, CL
 , McCourt AD, Rutkow,
@@ -686,7 +686,15 @@ Overfull \hbox (5.58887pt too wide) in paragraph at lines 210--211
 
 
 [3]
-Overfull \hbox (10.43285pt too wide) in paragraph at lines 232--233
+Overfull \hbox (23.82007pt too wide) in paragraph at lines 228--229
+\TU/IBMPlexSans(0)/m/n/10.95 pausal Women With Early Stage Breast Cancer.” \TU/
+IBMPlexSans(0)/m/it/10.95 The Oncologist\TU/IBMPlexSans(0)/m/n/10.95 , 21:5, 53
+9-546. [][]\TU/IBMPlexMono(0)/m/n/10.95 doi.org/hh5w[][]\TU/IBMPlexSans(0)/m/n/
+10.95 . 
+ []
+
+
+Overfull \hbox (10.43285pt too wide) in paragraph at lines 234--235
 \TU/IBMPlexSans(0)/m/n/10.95 “Nonclassical oxygen atom transfer reactions of ox
 omolybdenum(vi) bis(catecholate).” \TU/IBMPlexSans(0)/m/it/10.95 Chem-
  []
@@ -694,7 +702,7 @@ omolybdenum(vi) bis(catecholate).” \TU/IBMPlexSans(0)/m/it/10.95 Chem-
 
 
 [4]
-Overfull \hbox (5.142pt too wide) in paragraph at lines 258--259
+Overfull \hbox (5.142pt too wide) in paragraph at lines 264--265
 []\TU/IBMPlexSans(0)/m/n/10.95 Hood R, \TU/IBMPlexSans(0)/b/n/10.95 Seewald NJ\
 TU/IBMPlexSans(0)/m/n/10.95 , Rathore S, Reiss KA (2024) ”Interaction of BRCA1 
 vs BRCA2 pathogenic
@@ -704,13 +712,13 @@ vs BRCA2 pathogenic
 
 [5]
 
-LaTeX Font Warning: Font shape `TU/IBMPlexSans(0)/m/sc' undefined
-(Font)              using `TU/IBMPlexSans(0)/m/n' instead on input line 310.
-
-
-
 [6]
-Overfull \hbox (4.7391pt too wide) in paragraph at lines 386--388
+
+LaTeX Font Warning: Font shape `TU/IBMPlexSans(0)/m/sc' undefined
+(Font)              using `TU/IBMPlexSans(0)/m/n' instead on input line 316.
+
+
+Overfull \hbox (4.7391pt too wide) in paragraph at lines 392--394
 \TU/IBMPlexSans(0)/b/n/10.95 Teaching Assistant\TU/IBMPlexSans(0)/m/sc/10.95 , 
 Summer Program in Quantitative Methods of Social Research, Inter-university
  []
@@ -720,21 +728,15 @@ Summer Program in Quantitative Methods of Social Research, Inter-university
 [7]
 
 [8]
-Overfull \hbox (0.91972pt too wide) in paragraph at lines 493--495
+Overfull \hbox (0.91972pt too wide) in paragraph at lines 512--514
 []\TU/IBMPlexSans(0)/m/sc/10.95 Handling correlation in stacked difference-in-d
 ifferences estimates with application to med-
  []
 
 
-Overfull \hbox (18.69891pt too wide) in paragraph at lines 527--529
-[]\TU/IBMPlexSans(0)/m/sc/10.95 Sample size considerations for comparing dynami
-c treatment regimens in a sequential multiple-
- []
-
-
 
 [9]
-Overfull \hbox (18.69891pt too wide) in paragraph at lines 571--573
+Overfull \hbox (18.69891pt too wide) in paragraph at lines 546--548
 []\TU/IBMPlexSans(0)/m/sc/10.95 Sample size considerations for comparing dynami
 c treatment regimens in a sequential multiple-
  []
@@ -742,7 +744,15 @@ c treatment regimens in a sequential multiple-
 
 
 [10]
-Overfull \hbox (6.37943pt too wide) in paragraph at lines 642--645
+Overfull \hbox (18.69891pt too wide) in paragraph at lines 590--592
+[]\TU/IBMPlexSans(0)/m/sc/10.95 Sample size considerations for comparing dynami
+c treatment regimens in a sequential multiple-
+ []
+
+
+
+[11]
+Overfull \hbox (6.37943pt too wide) in paragraph at lines 661--664
 [][]$[][][][][] [] [] [] [][][][][][][] [] [][][] [] [][][][][][][][] [] [][][]
 [] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][]$[][] 
@@ -750,28 +760,28 @@ Overfull \hbox (6.37943pt too wide) in paragraph at lines 642--645
 
 
 
-[11]
-
 [12]
-Overfull \hbox (8.62805pt too wide) in paragraph at lines 745--746
+
+[13]
+Overfull \hbox (8.62805pt too wide) in paragraph at lines 767--768
 []\TU/IBMPlexSans(0)/m/sc/10.95 Chair, Diversity Equity and Inclusion Committee
 . Society for Causal Inference. 2025 - present. 
  []
 
 
-
-[13]
-Overfull \hbox (4.64223pt too wide) in paragraph at lines 756--757
+Overfull \hbox (4.64223pt too wide) in paragraph at lines 778--779
 \TU/IBMPlexSans(0)/m/sc/10.95 Learning and Teaching, University of Michigan. Co
 mpleted April 2021. [][]crlt.umich.edu/um.gtc[][] 
  []
 
 
 
-[14] (./Seewald-Curriculum-Vitae.aux)
+[14]
+
+[15] (./Seewald-Curriculum-Vitae.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-06-09>
+L3 programming layer <2025-09-02>
  ***********
 
 
@@ -782,12 +792,12 @@ d.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 15375 strings out of 468529
- 289802 string characters out of 5449559
- 773650 words of memory out of 5000000
- 43499 multiletter control sequences out of 15000+600000
- 633338 words of font info for 104 fonts, out of 8000000 for 9000
+ 15378 strings out of 468389
+ 290128 string characters out of 5442456
+ 777523 words of memory out of 5000000
+ 43642 multiletter control sequences out of 15000+600000
+ 634234 words of font info for 104 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
- 73i,11n,113p,1027b,576s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,11n,113p,1027b,575s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Seewald-Curriculum-Vitae.xdv (14 pages, 333604 bytes).
+Output written on Seewald-Curriculum-Vitae.xdv (15 pages, 350776 bytes).
