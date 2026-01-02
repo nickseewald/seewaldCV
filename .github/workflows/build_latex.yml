@@ -27,6 +27,7 @@ jobs:
         with:
           root_file: Seewald-Curriculum-Vitae.tex
           latexmk_use_xelatex: true
+          latexmk_shell_escape: true
       - uses: actions/upload-artifact@v4
         with:
           name: PDF
