@@ -27,7 +27,7 @@
     plauthorhandling=highlight,
     plauthorname={Seewald},
     annotations={student},
-    nameorder=given-family,
+    nameorder=family-given,
     plnumbering=local-descending
 ]{biblatex}
 \addbibresource[label=peerreviewed]{articles.bib}
@@ -71,6 +71,11 @@
     {\ifthenelse{\ifmorenames}{~et \,al \adddot}}%
   }{}%
 }
+
+% No commas between last name and first initials
+\renewcommand*{\revsdnamepunct}{}
+% Annotation before last name
+\renewcommand*{\mkbibnamefamily}[1]{\bplannot #1}
 
 %\newfontfamily\headingfont{DM_Serif_Display.ttf}
 %\newfontfamily\headingfont{Source Serif Pro}
