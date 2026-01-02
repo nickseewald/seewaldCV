@@ -6,9 +6,9 @@
 \usepackage{datetime}
 \usepackage{fontspec}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+% \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-
+\usepackage{csquotes}
 \newcommand*\publistbasestyle{numeric}
 
 \usepackage[%
@@ -25,11 +25,12 @@
     refsegment=section,
     hlyear=false,
     plauthorhandling=highlight,
-    plauthorname={Seewald},
+    % plauthorname={Seewald},
     annotations={student},
     nameorder=family-given,
     plnumbering=local-descending
 ]{biblatex}
+\plauthorname{Seewald}
 \addbibresource[label=peerreviewed]{articles.bib}
 \addbibresource[label=preprints]{preprints.bib}
 \addbibresource[label=chapters]{chapters.bib}
@@ -43,7 +44,7 @@
 
 \DeclareFieldFormat{labelnumberwidth}{#1.}
 
-\AtEveryBibitem{
+\AtEveryBibitem{%
     \clearfield{urlyear}
     \clearfield{urlmonth}
     \clearfield{url}
@@ -95,7 +96,7 @@
 \usepackage{titlesec}
 \usepackage{float}
 % \usepackage[toc,enum,bib,lineno,eqno]{tabfigures}
-\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+\usepackage[dvipsnames]{xcolor} % Required for specifying custom colors
 % \usepackage{ltablex} % longtable for tabularx?
 \usepackage{tabularx}
 % \usepackage{multirow}
@@ -165,8 +166,7 @@
 \fancyfoot[C]{\footnotesize{\thepage}}
 \fancyfoot[R]{\footnotesize{\monthname \ \the\year}}
 
-\fancypagestyle{firstpage}
-{
+\fancypagestyle{firstpage}{%
 	\fancyhf{}
 	\fancyfoot[C]{\footnotesize \thepage}
 	\fancyfoot[R]{\footnotesize{\monthname \ \the\year}}
