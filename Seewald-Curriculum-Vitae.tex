@@ -121,34 +121,46 @@
 	label=-
 }
 
-% Count table rows
-\usepackage{array}
-\newcounter{studentcount}
-\newcounter{committeecount}
-
+% ----- Count table rows -----
 \makeatletter
-\def\finalstudentcount{0}
-\def\finalcommitteecount{0}
-\AtEndDocument{%
-\immediate\write\@auxout{%
-\string\gdef\string\finalstudentcount{\the\value{studentcount}}}%
-\immediate\write\@auxout{%
-\string\gdef\string\finalcommitteecount{\the\value{committeecount}}}%
+
+% Define counters
+\newcounter{currentCountdown}   % Will hold the total read from the file
+\newcounter{rowTracker}    % Counts the rows as we build the table
+
+% Write table identification macro
+\newcommand{\initRevTable}{%
+    \setcounter{rowTracker}{-1} %reset row tracker for current table
+    % check if count already exists for current table
+    \@ifundefined{TableCount\thetable}{%
+        \setcounter{currentCountdown}{-1} %first run
+    }{%
+        %if found, set countdown to the saved value
+        \setcounter{currentCountdown}{\csname TableCount\thetable \endcsname}
+    }%       
 }
-\AtBeginDocument{%
-\setcounter{studentcount}{\startstudentcount}
-\addtocounter{studentcount}{-\finalstudentcount}
-\stepcounter{studentcount}%
-\setcounter{committeecount}{\startcommitteecount}
-\addtocounter{committeecount}{-\finalcommitteecount}
-\stepcounter{committeecount}%
-\immediate\write\@auxout{%
-\string\gdef\string\startstudentcount{\the\value{studentcount}}}%
-\immediate\write\@auxout{%
-\string\gdef\string\startcommitteecount{\the\value{committeecount}}}%
+
+% 3. Define the row command
+\newcommand{\autoRevNum}{%
+	\ifx % Safeguard: Ignore tabularx width-calculation trials
+	% A. Print the number
+	\ifnum\value{currentCountdown}=0%
+	\textbf{??}% Placeholder for the very first run
+	\else
+	\thecurrentCountdown% Print the countdown
+	\addtocounter{currentCountdown}{-1}% Decrement
+	\fi
 }
+
+% 4. Define a command to save the total to the .aux file
+\AtEndEnvironment{tabularx}{\immediate\write\@auxout{\string\gdef\string\csname TableCount\thetable\endcsname{\therowTracker}}}
+
+\newcommand\rowcount{\refstepcounter{rowTracker}}
+
 \makeatother
 
+
+% ----- TITLE -----
 \titleformat{\section}{\Large\raggedright\headingfont}{}{0em}{}[\titlerule] % Text formatting of sections
 % \titleformat{\subsection}{\large\raggedright\headingfont}{\thesection}{1em}{\hrule} % Text formatting of sections
 
@@ -423,10 +435,10 @@
 	
 	   \subsection*{Other Publications and Preprints}
 
-    \begin{plnumgroup}
-        \nocite{*}
-        \printbibliography[heading=none,type=online]
-    \end{plnumgroup}
+    % \begin{plnumgroup}
+    %     \nocite{*}
+    %     \printbibliography[heading=none,type=online]
+    % \end{plnumgroup}
        
 		% \begin{etaremune}
   %           \item \underline{Moin EE}, \textbf{Seewald NJ}, Halpern SD ``Development and Validation of a Simple Model to Predict Patient Height.'' \href{https://www.medrxiv.org/content/10.1101/2025.03.12.25323846}{medRxiv: \texttt{2025.03.12.25323846}}
@@ -570,20 +582,25 @@
 
     \subsection*{Academic Advisees}
 
+    \initRevTable
     % \setlength{\tabrowsep}{\itemsep}
-    \begin{tabularx}{\textwidth}{@{\addtocounter{studentcount}{-1}\thestudentcount.\hspace*{\tabcolsep}}XXr}
-        Ryan Jasper & Ph.D., Biostatistics & 2025 - Present \\
-        Ryan Jasper & M.A., Biostatistics & 2025 - Present \\
-        Meghan Gerety & Ph.D., Biostatistics & 2025 - Present \\
-        Luke Stewart \newline {\footnotesize Joint with Jinbo Chen, Ph.D.} &  M.A., Biostatistics & 2025 - Present \\
-        Melissa Martin \newline {\footnotesize Joint with Ian Barnett, Ph.D.} & Ph.D., Biostatistics & 2024 - Present 
+    The currentCountdown is \thecurrentCountdown
+    
+    \begin{tabularx}{\textwidth}{>{\rowcount}lXXr}
+        \autoRevNum & Ryan Jasper & Ph.D., Biostatistics & 2025 - Present \\
+        \autoRevNum & Ryan Jasper & M.A., Biostatistics & 2025 - Present \\
+        \autoRevNum & Meghan Gerety & Ph.D., Biostatistics & 2025 - Present \\
+        \autoRevNum & Luke Stewart \newline {\footnotesize Joint with Jinbo Chen, Ph.D.} &  M.A., Biostatistics & 2025 - Present \\
+        \autoRevNum & Melissa Martin \newline {\footnotesize Joint with Ian Barnett, Ph.D.} & Ph.D., Biostatistics & 2024 - Present
     \end{tabularx}
+
+    This table has %\csname\TableCount0\endcsname rows.
 
     
     \subsubsection*{Ph.D. Committee Membership}
-    \begin{tabularx}{\linewidth}{@{\addtocounter{committeecount}{-1}\thecommitteecount.\hspace*{\tabcolsep}}XXr}
-        Jimmy Kelliher \newline {\footnotesize Committee Chair} & Ph.D., Biostatistics & 2024 - Present
-    \end{tabularx}
+    % \begin{tabularx}{\linewidth}{@{\addtocounter{committeecount}{-1}\thecommitteecount.\hspace*{\tabcolsep}}XXr}
+    %     Jimmy Kelliher \newline {\footnotesize Committee Chair} & Ph.D., Biostatistics & 2024 - Present
+    % \end{tabularx}
     
     \subsection*{Biostatistics Ph.D. Lab Rotation Advisees}
     \begin{enumerate}
