@@ -1,0 +1,61 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'Seewald-Curriculum-Vitae.blg'
+[92] biber:342> INFO - === Fri Jan 23, 2026, 22:55:58
+[108] Biber.pm:421> INFO - Reading 'Seewald-Curriculum-Vitae.bcf'
+[183] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[183] Biber.pm:999> INFO - Using all citekeys in bib section 1
+[184] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[184] Biber.pm:999> INFO - Using all citekeys in bib section 2
+[184] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[184] Biber.pm:999> INFO - Using all citekeys in bib section 3
+[184] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[184] Biber.pm:999> INFO - Using all citekeys in bib section 4
+[184] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[217] Biber.pm:4487> INFO - Processing section 1
+[226] Biber.pm:4678> INFO - Looking for bibtex file 'articles.bib' for section 1
+[229] bibtex.pm:1713> INFO - LaTeX decoding ...
+[288] bibtex.pm:1519> INFO - Found BibTeX data source 'articles.bib'
+[748] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[748] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[748] Biber.pm:4307> INFO - Sorting list 'ddt/global//global/global/global' of type 'entry' with template 'ddt' and locale 'en-US'
+[748] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[780] Biber.pm:4487> INFO - Processing section 2
+[781] Biber.pm:4678> INFO - Looking for bibtex file 'articles.bib' for section 2
+[1170] Biber.pm:4678> INFO - Looking for bibtex file 'preprints.bib' for section 2
+[1171] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1180] bibtex.pm:1519> INFO - Found BibTeX data source 'preprints.bib'
+[1214] Biber.pm:4678> INFO - Looking for bibtex file 'chapters.bib' for section 2
+[1215] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1222] bibtex.pm:1519> INFO - Found BibTeX data source 'chapters.bib'
+[1273] Biber.pm:4678> INFO - Looking for bibtex file 'abstracts.bib' for section 2
+[1275] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1306] bibtex.pm:1519> INFO - Found BibTeX data source 'abstracts.bib'
+[1500] Biber.pm:4678> INFO - Looking for bibtex file 'underReview.bib' for section 2
+[1500] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1505] bibtex.pm:1519> INFO - Found BibTeX data source 'underReview.bib'
+[1572] Biber.pm:4678> INFO - Looking for bibtex file 'altMedia.bib' for section 2
+[1573] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1575] bibtex.pm:1519> INFO - Found BibTeX data source 'altMedia.bib'
+[1674] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1674] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1674] Biber.pm:4307> INFO - Sorting list 'ddt/global//global/global/global' of type 'entry' with template 'ddt' and locale 'en-US'
+[1675] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[1727] Biber.pm:4487> INFO - Processing section 3
+[1727] Biber.pm:4678> INFO - Looking for bibtex file 'articles.bib' for section 3
+[2117] Biber.pm:4678> INFO - Looking for bibtex file 'preprints.bib' for section 3
+[2151] Biber.pm:4678> INFO - Looking for bibtex file 'chapters.bib' for section 3
+[2195] Biber.pm:4678> INFO - Looking for bibtex file 'abstracts.bib' for section 3
+[2386] Biber.pm:4678> INFO - Looking for bibtex file 'underReview.bib' for section 3
+[2452] Biber.pm:4678> INFO - Looking for bibtex file 'altMedia.bib' for section 3
+[2552] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2552] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2552] Biber.pm:4307> INFO - Sorting list 'ddt/global//global/global/global' of type 'entry' with template 'ddt' and locale 'en-US'
+[2552] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[2603] Biber.pm:4487> INFO - Processing section 4
+[2604] Biber.pm:4678> INFO - Looking for bibtex file 'underReview.bib' for section 4
+[2683] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2683] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2683] Biber.pm:4307> INFO - Sorting list 'ddt/global//global/global/global' of type 'entry' with template 'ddt' and locale 'en-US'
+[2683] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[2688] bbl.pm:676> INFO - Writing 'Seewald-Curriculum-Vitae.bbl' with encoding 'UTF-8'
+[2820] bbl.pm:779> INFO - Output to Seewald-Curriculum-Vitae.bbl
