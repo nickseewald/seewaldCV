@@ -1,2 +1,13 @@
 .DS_Store
-*.pdf
+*.aux
+*.bbl*
+*.bcf*
+*.blg
+*.bpx
+*.fdb*
+*.fls
+*.log
+*.out
+*.run*
+*.synctex*
+*.xdv
