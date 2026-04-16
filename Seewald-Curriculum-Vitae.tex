@@ -7,7 +7,7 @@
 \usepackage{fontspec}
 \usepackage[T1]{fontenc}
 % \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
+\usepackage[american]{babel}
 \usepackage{csquotes}
 \newcommand*\publistbasestyle{numeric}
 
@@ -39,6 +39,9 @@ plnumbering=local-descending
 \addbibresource[label=altmedia]{altMedia.bib}
 \ExecutePublistOptions{plsorting=ddt}
 % \nocite{*}
+
+% biblatex URL line breaking
+\setcounter{biburllcpenalty}{7000}
 
 \renewbibmacro{in:}{}
 
@@ -333,12 +336,17 @@ plnumbering=local-descending
 	
 	\subsection*{In Preparation}
 	\begin{etaremune}
-		\item \textbf{NJ Seewald}, M Cohen*, EE McGinty, and EA Stuart. ``Ready to Roll? Whether and when to aggregate multilevel data in difference-in-differences.'' 
+		\item \textbf{Seewald NJ}, *Cohen M, McGinty EE, and Stuart EA. ``Ready to Roll? Whether and when to aggregate multilevel data in difference-in-differences.'' 
 		
-		\item \textbf{NJ Seewald}, R Jasper*, and D Almirall. ``Sample size and timepoint tradeoffs for comparing dynamic treatment regimens in a longitudinal SMART.''
+		\item \textbf{Seewald NJ}, *Jasper R, and Almirall D. ``Sample size and timepoint tradeoffs for comparing dynamic treatment regimens in a longitudinal SMART.''
 	\end{etaremune}
 	
 	\subsection*{Other Publications and Preprints}
+
+    \begin{refsection}[preprints]
+        \nocite{*}
+        \printbibliography[heading=none]
+    \end{refsection}
 	
 	% \begin{plnumgroup}
 		%     \nocite{*}
@@ -809,6 +817,7 @@ plnumbering=local-descending
 		\item[] JAMA Pediatrics
 		\item[] Journal of the American Statistical Association (Theory and Methods)
 		\item[] Pharmacoepidemiology and Drug Safety
+        \item[] PLOS Medicine
 		\item[] Psychological Methods
 		\item[] R Journal
 		\item[] Statistics and Public Policy
