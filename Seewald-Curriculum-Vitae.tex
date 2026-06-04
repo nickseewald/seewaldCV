@@ -94,7 +94,7 @@ plnumbering=local-descending
 
 \usepackage{enumerate}
 \usepackage{etaremune}
-\usepackage{enumitem}
+\usepackage[inline]{enumitem}
 \usepackage{titling}
 \usepackage{titlesec}
 \usepackage{float}
@@ -104,6 +104,7 @@ plnumbering=local-descending
 \usepackage{tabularx}
 % \usepackage{multirow}
 \usepackage{hyphenat}
+\usepackage{calc}
 
 \usepackage{hyperref} % Required for adding links and customizing them
 \definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
@@ -123,6 +124,8 @@ plnumbering=local-descending
 	leftmargin=1em,
 	label=-
 }
+% Inline list indent
+% \setlength{}{}
 
 % ----- Count table rows -----
 \makeatletter
@@ -315,40 +318,41 @@ plnumbering=local-descending
 		\GetAnnotSymbol{student} denotes trainee with significant mentoring.}
 	
 	\subsection*{Peer-Reviewed Articles}
-	
-	\begin{refsection}[peerreviewed]
-		\nocite{*}
-		\printbibliography[heading=none,type=article]
-	\end{refsection}	
+    	\begin{refsection}[peerreviewed]
+    		\nocite{*}
+    		\printbibliography[heading=none,type=article]
+    	\end{refsection}	
 	
 	\subsection*{Peer-Reviewed Book Chapters}
-	
-	\begin{refsection}
-		\nocite{*}
-		\printbibliography[heading=none,type=incollection]
-	\end{refsection}
+    	\begin{refsection}
+    		\nocite{*}
+    		\printbibliography[heading=none,type=incollection]
+    	\end{refsection}
+
+    \subsection*{Abstracts}
+        \begin{refsection}[abstracts]
+            \nocite{*}
+            \printbibliography[heading=none,type=inproceedings]
+        \end{refsection}
 		
 	\subsection*{Under Review}
-	
-	\begin{refsection}[underreview]
-		\nocite{*}
-		\printbibliography[heading=none]
-	\end{refsection}
-	
+    	\begin{refsection}[underreview]
+    		\nocite{*}
+    		\printbibliography[heading=none]
+    	\end{refsection}
 	
 	\subsection*{In Preparation}
-	\begin{etaremune}
-		\item \textbf{Seewald NJ}, *Cohen M, McGinty EE, and Stuart EA. ``Ready to Roll? Whether and when to aggregate multilevel data in difference-in-differences.'' 
-		
-		\item \textbf{Seewald NJ}, *Jasper R, and Almirall D. ``Sample size and timepoint tradeoffs for comparing dynamic treatment regimens in a longitudinal SMART.''
-	\end{etaremune}
+    	\begin{etaremune}
+    		\item \textbf{Seewald NJ}, *Cohen M, McGinty EE, and Stuart EA. ``Ready to Roll? Whether and when to aggregate multilevel data in difference-in-differences.'' 
+    		
+    		\item \textbf{Seewald NJ}, *Jasper R, and Almirall D. ``Sample size and timepoint tradeoffs for comparing dynamic treatment regimens in a longitudinal SMART.''
+    	\end{etaremune}
 	
-	\subsection*{Other Publications and Preprints}
-
-    \begin{refsection}[preprints]
-        \nocite{*}
-        \printbibliography[heading=none]
-    \end{refsection}
+	\subsection*{Research Publications (not peer reviewed)}
+        \begin{refsection}[preprints]
+            \nocite{*}
+            \printbibliography[heading=none]
+        \end{refsection}
 	
 	% \begin{plnumgroup}
 		%     \nocite{*}
@@ -380,7 +384,9 @@ plnumbering=local-descending
 	
 	\subsubsection*{Course Director}
 	\begin{etaremune}
-		\item BSTA 6100: Biostatistical Methods for Epidemiology \hfill Fall 2024, Fall 2025
+        \item BSTA 7000: Seminal Ideas and Controversies in Statistics \hfill Fall 2026 \\
+        Co-Director: Nandita Mitra, Ph.D.
+		\item BSTA 6100: Biostatistical Methods for Epidemiology \hfill Fall 2024, 2025
 	\end{etaremune}
 	
 	\subsubsection*{Guest Lecturer}
@@ -424,7 +430,7 @@ plnumbering=local-descending
 	
 	\subsubsection*{Graduate Student Instructor}
 	\begin{etaremune}
-		\item \textit{STATS 250: Introduction to Statistics and Data Analysis} \hfill Spring 2018, AY 2019-20, AY 2020-1 \\
+		\item \textit{STATS 250: Introduction to Statistics and Data Analysis} \hfill Spring 2018, AY 2019-20, 20-1 \\
 		Instructor: Brenda Gunderson, Ph.D.; Jack Miller, Ph.D.
 		%			\vspace{-\topsep}
 		%			\begin{itemize}
@@ -685,49 +691,6 @@ plnumbering=local-descending
 		\end{conflist}
 	\end{enumerate}
 	
-	\section*{Research Grants}
-	\subsection*{Funded}
-	\begin{enumerate}
-		\item Impact of U.S. State Recreational Cannabis Laws on Opioid Prescribing for Chronic Non-Cancer Pain and Statistical Methods for Informative Policy Adoption
-		\begin{description}[noitemsep, topsep=0pt, labelindent=1em]
-			\item[Role] Principal Investigator
-			\item[Funding Source] Thomas B. McCabe and Jeannette E. Laws McCabe Fund \\ \url{https://www.med.upenn.edu/evdresearch/mccabe-fund.html}
-			\item[Funding Level] Pilot Award, 7/1/24 - 12/31/25: \$36,347
-			%		\item[Main Objective]  To use mixed-methods to characterize the implementation and evaluate the effect of state medical cannabis laws on receipt of guideline-discordant opioid and guideline-concordant non-opioid treatment among patients diagnosed with chronic non-cancer pain.
-		\end{description}
-	\end{enumerate}
-	
-	% \begin{enumerate}
-		% 	\item State Medical Cannabis Laws, Chronic Pain, and Opioids: A Mixed-Methods Approach
-		% 	\begin{description}[noitemsep, topsep=0pt, labelindent=1em]
-			% 		\item[Principal Investigator] Beth McGinty (1R01DA049789)
-			% 		\item[Funding Source] National Institutes of Health, National Institute on Drug Abuse
-			% %		\item[Funding Level] 7/1/20-6/30/24: \$1,751,547 (direct)
-			% %		\item[Main Objective]  To use mixed-methods to characterize the implementation and evaluate the effect of state medical cannabis laws on receipt of guideline-discordant opioid and guideline-concordant non-opioid treatment among patients diagnosed with chronic non-cancer pain.		
-			% 		\item[Role] Investigator 
-			% 	\end{description}
-		% \end{enumerate}
-	% \subsection*{Under Review}
-	% 	\begin{enumerate}
-		% 		\item Center to Accelerate Translation of Interventions to Decrease Premature Mortality in SMI
-		% 		\begin{description}[noitemsep, topsep=0pt, labelindent=1em]
-			% 			\item[Principal Investigator] Gail L. Daumit
-			% 			\item[Funding Source] National Institutes of Health, National Institute of Mental Health
-			% 			\item[Role] Project Leader, Methods Core (PI: E.A. Stuart) 
-			% 			\item[Submission Target] May 2023
-			% 		\end{description}
-		% 	\end{enumerate}
-	% %\subsection*{Pending Submission}
-	% \subsection*{Not Funded}
-	% \begin{enumerate}
-		% 	\item iHear: Digital Hearing Healthcare Delivery Platform for OTC Hearing Aids
-		% 	\begin{description}[noitemsep, topsep=0pt, labelindent=1em]
-			% 		\item[Principal Investigators] Sumitrajit Dhar and Larry Humes
-			% 		\item[Funding Source] National Institutes of Health, National Institute on Deafness and Other Communication Disorders
-			% 		\item[Role] Consultant, statistics and trial design
-			% 	\end{description}
-		% \end{enumerate}	
-	
 	\section*{Software}
 	
 	\begin{enumerate}
@@ -797,12 +760,18 @@ plnumbering=local-descending
 	
 	\subsection*{Peer Review and Editorial Activities}
 	\subsubsection*{Editorial}
-	\begin{enumerate}[noitemsep,leftmargin = 1.25em]
-		\item[] Guest Academic Editor, PLOS Medicine
-	\end{enumerate}
+	\begin{etaremune}
+        % \item Associate Editor, American Journal of Epidemiology
+		\item Guest Academic Editor, PLOS Medicine	    
+	\end{etaremune}
 	
-	\subsubsection*{Ad hoc Reviewer}
-	\begin{enumerate}[noitemsep,leftmargin = 1.25em]
+	\subsubsection*{Ad hoc Reviewer, Academic Journals}
+    \begin{minipage}[l]{1.25em}
+        \hfill
+    \end{minipage}    
+    \begin{minipage}[r]{\linewidth - 1.25em}
+        \noindent
+        \begin{itemize*}[before=\kern-0.3em, itemjoin={{~\textperiodcentered~}}, afterlabel=\unskip{{~}}]
 		\item[] American Journal of Epidemiology
 		\item[] American Journal of Public Health
 		\item[] Annals of Applied Statistics
@@ -818,6 +787,7 @@ plnumbering=local-descending
 		\item[] JAMA Network Open
 		\item[] JAMA Pediatrics
 		\item[] Journal of the American Statistical Association (Theory and Methods)
+        \item[] Journal of Causal Inference
 		\item[] Pharmacoepidemiology and Drug Safety
         \item[] PLOS Medicine
 		\item[] Psychological Methods
@@ -825,7 +795,15 @@ plnumbering=local-descending
 		\item[] Statistics and Public Policy
 		\item[] Statistics in Medicine
 		\item[] Value in Health
-	\end{enumerate}
+	\end{itemize*}
+    \end{minipage}
+
+    \subsubsection*{Grant Review}
+    \begin{etaremune}
+        \item Scientist Reviewer (methodologist), PCORI Merit Review Panel, Phased Large Awards for Comparative Effectiveness Research (PLACER). Patient-Centered Outcomes Research Institute (PCORI). 2026.
+        \item Panel Member, Pharmacotherapy of Substance Use Disorder (PSUD). National Institutes of Health (NIH). 2026.
+        \item Subject Matter Expert reviewer of Draft Final Report. Patient-Centered Outcomes Research Institute (PCORI). 2025.
+    \end{etaremune}
 	
 	\subsection*{Departmental Service}
 	\begin{etaremune}
@@ -871,7 +849,54 @@ plnumbering=local-descending
 		\item Preparing to Teach: Workshop to prepare graduate students for a role as undergraduate faculty responsible for teaching statistics and data science. May 2020. \href{https://preparingtoteach.org/}{preparingtoteach.org}
 		\item Professional Development Diversity, Equity, and Inclusion Certificate. Rackham Graduate School, University of Michigan. Completed April 2020. \href{https://rackham.umich.edu/professional-development/dei-certificate/}{rackham.umich.edu}
 	\end{etaremune}
-	%
+
+    \section*{Research Grants}
+	
+    \subsection*{Funded}
+	\begin{enumerate}
+		\item Impact of U.S. State Recreational Cannabis Laws on Opioid Prescribing for Chronic Non-Cancer Pain and Statistical Methods for Informative Policy Adoption
+		\begin{description}[noitemsep, topsep=0pt, labelindent=1em]
+			\item[Role] Principal Investigator
+			\item[Funding Source] Thomas B. McCabe and Jeannette E. Laws McCabe Fund \\ \url{https://www.med.upenn.edu/evdresearch/mccabe-fund.html}
+			\item[Funding Level] Pilot Award, 7/1/24 - 12/31/25: \$36,347
+			%		\item[Main Objective]  To use mixed-methods to characterize the implementation and evaluate the effect of state medical cannabis laws on receipt of guideline-discordant opioid and guideline-concordant non-opioid treatment among patients diagnosed with chronic non-cancer pain.
+		\end{description}
+	\end{enumerate}
+	
+	% \begin{enumerate}
+		% 	\item State Medical Cannabis Laws, Chronic Pain, and Opioids: A Mixed-Methods Approach
+		% 	\begin{description}[noitemsep, topsep=0pt, labelindent=1em]
+			% 		\item[Principal Investigator] Beth McGinty (1R01DA049789)
+			% 		\item[Funding Source] National Institutes of Health, National Institute on Drug Abuse
+			% %		\item[Funding Level] 7/1/20-6/30/24: \$1,751,547 (direct)
+			% %		\item[Main Objective]  To use mixed-methods to characterize the implementation and evaluate the effect of state medical cannabis laws on receipt of guideline-discordant opioid and guideline-concordant non-opioid treatment among patients diagnosed with chronic non-cancer pain.		
+			% 		\item[Role] Investigator 
+			% 	\end{description}
+		% \end{enumerate}
+	% \subsection*{Under Review}
+	% 	\begin{enumerate}
+		% 		\item Center to Accelerate Translation of Interventions to Decrease Premature Mortality in SMI
+		% 		\begin{description}[noitemsep, topsep=0pt, labelindent=1em]
+			% 			\item[Principal Investigator] Gail L. Daumit
+			% 			\item[Funding Source] National Institutes of Health, National Institute of Mental Health
+			% 			\item[Role] Project Leader, Methods Core (PI: E.A. Stuart) 
+			% 			\item[Submission Target] May 2023
+			% 		\end{description}
+		% 	\end{enumerate}
+	% %\subsection*{Pending Submission}
+	% \subsection*{Not Funded}
+	% \begin{enumerate}
+		% 	\item iHear: Digital Hearing Healthcare Delivery Platform for OTC Hearing Aids
+		% 	\begin{description}[noitemsep, topsep=0pt, labelindent=1em]
+			% 		\item[Principal Investigators] Sumitrajit Dhar and Larry Humes
+			% 		\item[Funding Source] National Institutes of Health, National Institute on Deafness and Other Communication Disorders
+			% 		\item[Role] Consultant, statistics and trial design
+			% 	\end{description}
+		% \end{enumerate}	
+	
+
+
+    
 	%\section*{References}
 	%\begin{center}
 	%	\small
