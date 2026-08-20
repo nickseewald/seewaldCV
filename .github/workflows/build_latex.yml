@@ -51,7 +51,3 @@ jobs:
       #         git add Seewald-Curriculum-Vitae.pdf
       #         git commit -m "Update generated PDF" || echo "No changes to commit"
       #         git push
-      - name: Create PR
-        uses: peter-evans/create-pull-request@v8
-        with:
-         commit-message: "[create-pull-request] build_latex"
