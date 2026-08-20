@@ -55,5 +55,4 @@ jobs:
         uses: peter-evans/create-pull-request@v8
         with:
           commit-message: "[create-pull-request] build_latex"
-          push-to-fork: false
           force-push-and-delete: false
